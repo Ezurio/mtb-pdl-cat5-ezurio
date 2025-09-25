@@ -222,9 +222,6 @@ typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:ga0032c35cacd9e9f9b6d59ed74c619cd2"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#ga0032c35cacd9e9f9b6d59ed74c619cd2">wiced_ble_ext_conn_initiator_filter_policy_t</a></td></tr>
 <tr class="memdesc:ga0032c35cacd9e9f9b6d59ed74c619cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiator filter policy used.  <a href="#ga0032c35cacd9e9f9b6d59ed74c619cd2">More...</a><br /></td></tr>
 <tr class="separator:ga0032c35cacd9e9f9b6d59ed74c619cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37a6ed519971c393b510b2a4900fc441"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#ga37a6ed519971c393b510b2a4900fc441">wiced_ble_ext_scanning_filter_policy_t</a></td></tr>
-<tr class="memdesc:ga37a6ed519971c393b510b2a4900fc441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scanning filter policy used.  <a href="#ga37a6ed519971c393b510b2a4900fc441">More...</a><br /></td></tr>
-<tr class="separator:ga37a6ed519971c393b510b2a4900fc441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf9e70a8066f58dd3a32e59bfe891bfa0"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#gaf9e70a8066f58dd3a32e59bfe891bfa0">wiced_ble_ext_adv_phy_options_t</a></td></tr>
 <tr class="memdesc:gaf9e70a8066f58dd3a32e59bfe891bfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phy adv options to be set in <a class="el" href="group__wicedbt___extended.html#ga0ce3eb88360c55825e85a589dace2579" title="Sends the HCI command to set the parameters for extended advetisement. ">wiced_ble_ext_adv_set_params</a>.  <a href="#gaf9e70a8066f58dd3a32e59bfe891bfa0">More...</a><br /></td></tr>
 <tr class="separator:gaf9e70a8066f58dd3a32e59bfe891bfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,10 +290,10 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga122edf4d5a453b329774c4cbdad6b4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiator filter policy enums used in extended create connection command.  <a href="group__wicedbt___extended.html#ga122edf4d5a453b329774c4cbdad6b4a5">More...</a><br /></td></tr>
 <tr class="separator:ga122edf4d5a453b329774c4cbdad6b4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0483a0344a8bc72119c84e6ab95111ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#ga0483a0344a8bc72119c84e6ab95111ea">wiced_ble_ext_scanning_filter_policy_e</a> { <a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaa64122b38be62083116285f5a6a65cd65">WICED_BLE_EXT_SCAN_BASIC_UNFILTERED_SP</a> = 0,
-<a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaaf2f8d3a32c6fc24cd894a4a4db9f0dad">WICED_BLE_EXT_SCAN_BASIC_FILTERED_SP</a> = 1,
-<a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaa517c5757cdc0f3e7b93f7525c6a5f118">WICED_BLE_EXT_SCAN_EXTENDED_UNFILTERED_SP</a> = 2,
-<a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaad3b0ab649915838fbf913ba83ea3010f">WICED_BLE_EXT_SCAN_EXTENDED_FILTERED_SP</a> = 3
+<tr class="memitem:ga0483a0344a8bc72119c84e6ab95111ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#ga0483a0344a8bc72119c84e6ab95111ea">wiced_ble_ext_scanning_filter_policy_e</a> { <a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaa64122b38be62083116285f5a6a65cd65">WICED_BLE_EXT_SCAN_BASIC_UNFILTERED_SP</a> = WICED_BLE_SCAN_BASIC_UNFILTERED_SP,
+<a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaaf2f8d3a32c6fc24cd894a4a4db9f0dad">WICED_BLE_EXT_SCAN_BASIC_FILTERED_SP</a> = WICED_BLE_SCAN_BASIC_FILTERED_SP,
+<a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaa517c5757cdc0f3e7b93f7525c6a5f118">WICED_BLE_EXT_SCAN_EXTENDED_UNFILTERED_SP</a> = WICED_BLE_SCAN_EXTENDED_UNFILTERED_SP,
+<a class="el" href="group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaad3b0ab649915838fbf913ba83ea3010f">WICED_BLE_EXT_SCAN_EXTENDED_FILTERED_SP</a> = WICED_BLE_SCAN_EXTENDED_FILTERED_SP
  }</td></tr>
 <tr class="memdesc:ga0483a0344a8bc72119c84e6ab95111ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scanning filter policy enums used in set extended scan parameters command.  <a href="group__wicedbt___extended.html#ga0483a0344a8bc72119c84e6ab95111ea">More...</a><br /></td></tr>
 <tr class="separator:ga0483a0344a8bc72119c84e6ab95111ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -372,6 +369,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6b3ce17fe53ce2670dc00a2c0facffe3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___result.html#gacfc32ead8a827d53416f01b19eb58310">wiced_bt_dev_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#ga6b3ce17fe53ce2670dc00a2c0facffe3">wiced_ble_ext_create_connection</a> (<a class="el" href="structwiced__ble__ext__conn__cfg__t.html">wiced_ble_ext_conn_cfg_t</a> *p_ext_conn_cfg)</td></tr>
 <tr class="memdesc:ga6b3ce17fe53ce2670dc00a2c0facffe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a connection using extended HCI commands.  <a href="#ga6b3ce17fe53ce2670dc00a2c0facffe3">More...</a><br /></td></tr>
 <tr class="separator:ga6b3ce17fe53ce2670dc00a2c0facffe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17d3a85eb558ee853bbeac1ddc94d1e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___result.html#gacfc32ead8a827d53416f01b19eb58310">wiced_bt_dev_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#ga17d3a85eb558ee853bbeac1ddc94d1e8">wiced_ble_cancel_connection</a> (void)</td></tr>
+<tr class="memdesc:ga17d3a85eb558ee853bbeac1ddc94d1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a LE connection.  <a href="#ga17d3a85eb558ee853bbeac1ddc94d1e8">More...</a><br /></td></tr>
+<tr class="separator:ga17d3a85eb558ee853bbeac1ddc94d1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab81b607c21afc5fc637ad6dea217963d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___extended.html#gab81b607c21afc5fc637ad6dea217963d">wiced_ble_ext_adv_register_cback</a> (<a class="el" href="group__wicedbt___extended.html#ga0b58602384c1c0eb65c7aa5ce03dc68f">wiced_ble_ext_adv_event_cback_t</a> p_app_adv_ext_event_cb)</td></tr>
 <tr class="memdesc:gab81b607c21afc5fc637ad6dea217963d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an application callback function to receive extended, periodic advertising events and PAWR command failed status event.  <a href="#gab81b607c21afc5fc637ad6dea217963d">More...</a><br /></td></tr>
 <tr class="separator:gab81b607c21afc5fc637ad6dea217963d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,21 +469,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga37a6ed519971c393b510b2a4900fc441"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef uint8_t <a class="el" href="group__wicedbt___extended.html#ga37a6ed519971c393b510b2a4900fc441">wiced_ble_ext_scanning_filter_policy_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Scanning filter policy used. </p>
-<p>(see <a class="el" href="group__wicedbt___extended.html#ga0483a0344a8bc72119c84e6ab95111ea" title="Scanning filter policy enums used in set extended scan parameters command. ">wiced_ble_ext_scanning_filter_policy_e</a>) </p>
 
 </div>
 </div>
@@ -809,6 +794,29 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga17d3a85eb558ee853bbeac1ddc94d1e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___result.html#gacfc32ead8a827d53416f01b19eb58310">wiced_bt_dev_status_t</a> wiced_ble_cancel_connection </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancel a LE connection. </p>
+<dl class="section return"><dt>Returns</dt><dd>wiced_bt_dev_status_t</dd></dl>
+<p><b> WICED_BT_UNSUPPORTED </b> : If command not supported <br />
+<b> WICED_BT_NO_RESOURCES </b> : If no memory to issue the command <br />
+<b> WICED_BT_SUCCESS </b> : If successful<br />
+</p>
+
+</div>
+</div>
 <a class="anchor" id="gae248d9ef177b922584ad8472186d851d"></a>
 <div class="memitem">
 <div class="memproto">

@@ -1065,14 +1065,11 @@ wiced_bool_t wiced_bt_l2cap_cancel_ble_connect_req (wiced_bt_device_address_t re
  *  @brief          Update LE connection parameters.
  *
  *  @param[in]      rem_bdRa    : Remote BD Address
- *  @param[in]      min_int     : Min interval, measured in units of 1.25 ms
- *  @param[in]      max_int     : Max interval, measured in units of 1.25 ms
- *  @param[in]      latency     : Latency value
- *  @param[in]      timeout     : Timeout value, measured in units of 10 ms
+ *  @param[in]      p_conn_params : Preferred connection parameters
  *
  *  @return:        TRUE if update started
  */
-wiced_bool_t wiced_bt_l2cap_update_ble_conn_params (wiced_bt_device_address_t rem_bdRa, uint16_t min_int, uint16_t max_int, uint16_t latency, uint16_t timeout);
+wiced_bool_t wiced_bt_l2cap_update_ble_conn_params (wiced_bt_device_address_t rem_bdRa, wiced_bt_ble_pref_conn_params_t *p_conn_params);
 
 
 /**

@@ -280,7 +280,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<b>BTSS_SYSTEM_NVRAM_OTA_ERR_CERT_VALIDATION_FAILED</b> = 0x07,
 <br />
-&#160;&#160;<b>BTSS_SYSTEM_NVRAM_OTA_ERR_NO_ACCESS</b> = 0x08
+&#160;&#160;<b>BTSS_SYSTEM_NVRAM_OTA_ERR_NO_ACCESS</b> = 0x08,
+<br />
+&#160;&#160;<b>BTSS_SYSTEM_NVRAM_OTA_ERR_INVALID_MDH_SIZE</b> = 0x09
 <br />
  }</td></tr>
 <tr class="separator:ga31758d38e655656179d059ebc7ef25fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -294,6 +296,16 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gab32892682c0ebac57836e378fccf66e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flash power down mode control methods. <br /></td></tr>
 <tr class="separator:gab32892682c0ebac57836e378fccf66e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e811470e597f4bc50bf2771b2be7c99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2e811470e597f4bc50bf2771b2be7c99"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__data__structures.html#ga2e811470e597f4bc50bf2771b2be7c99">BTSS_SYSTEM_PSRAM_LPM_CONTROL_t</a> { <br />
+&#160;&#160;<b>BTSS_SYSTEM_PSRAM_LOW_POWER_DISALLOW</b> = 0,
+<br />
+&#160;&#160;<b>BTSS_SYSTEM_PSRAM_LOW_POWER_ALLOW_APP_CONTROL</b> = 1,
+<br />
+&#160;&#160;<b>BTSS_SYSTEM_PSRAM_LOW_POWER_ALLOW_BTSS_CONTROL</b> = 2
+<br />
+ }</td></tr>
+<tr class="memdesc:ga2e811470e597f4bc50bf2771b2be7c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">PSRAM Low Power mode control methods. <br /></td></tr>
+<tr class="separator:ga2e811470e597f4bc50bf2771b2be7c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="ga037a0a66d38cf168be9bd0bcc0cb86f7"></a>

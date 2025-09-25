@@ -13,7 +13,7 @@ var searchData=
   ['eir_5fuuid_5fmask',['eir_uuid_mask',['../structwiced__bt__dev__inquiry__scan__result__t.html#a3d41962fd15cd8351f34380ce3f34eee',1,'wiced_bt_dev_inquiry_scan_result_t']]],
   ['embedded_20flash_20interface',['Embedded Flash Interface',['../group___embedded_flash_interface_driver.html',1,'']]],
   ['enabled',['enabled',['../unionwiced__bt__management__evt__data__t.html#aa611804a1de3172987b0f0995658153e',1,'wiced_bt_management_evt_data_t']]],
-  ['encryption',['encryption',['../structwiced__ble__biginfo__adv__report__t.html#af29e48a96ba947f00e46b575b3fb8094',1,'wiced_ble_biginfo_adv_report_t']]],
+  ['encryption',['encryption',['../structwiced__ble__biginfo__adv__report__t.html#a903c2cabd0336ce22c3a0c2917870060',1,'wiced_ble_biginfo_adv_report_t']]],
   ['encryption_5fstatus',['encryption_status',['../unionwiced__bt__management__evt__data__t.html#aec8fb4af1319f261d54c593019d86964',1,'wiced_bt_management_evt_data_t']]],
   ['end_5fitem',['end_item',['../structwiced__bt__avrc__browse__get__items__cmd__t.html#af53b7d410058116caae062a613fdfe36',1,'wiced_bt_avrc_browse_get_items_cmd_t']]],
   ['endian',['endian',['../structwiced__spi__transport__cfg__s.html#a9e439372d9c4a062019aabf17a9366c1',1,'wiced_spi_transport_cfg_s']]],

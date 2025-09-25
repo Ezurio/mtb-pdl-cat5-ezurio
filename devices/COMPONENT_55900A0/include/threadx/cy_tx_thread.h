@@ -69,6 +69,12 @@ BOOL32 thread_ap_sec_hw_openDeviceAccess(SEC_HW_DEVICE_t device, UINT8 *address,
 //! Allocates permanent memory.
 void* thread_ap_memory_AllocatePermanent(UINT32 size_bytes);
 
+//! @brief Allow devices to read the unique SoC-id
+//! @param[out] ptr_buffer buffer that holds SoC-id
+//! @param[in] len_buffer size of buffer (32 bytes)
+//! @return TRUE on success, else FALSE
+BOOL32 thread_ap_get_SoC_Id(uint8_t *ptr_buffer, uint32_t len_buffer);
+
 #if NVRAM_SUPPORTED
 UINT32 thread_ap_config_VS_Read (UINT16 vsID, UINT32 itemLength, UINT8 *payload);
 UINT32 thread_ap_config_VS_Write (UINT16 vsID, UINT32 itemLength, UINT8 *payload);

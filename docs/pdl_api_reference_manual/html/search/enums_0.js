@@ -11,6 +11,7 @@ var searchData=
   ['btss_5fsystem_5fflash_5fpower_5fdown_5fcmd_5ft',['BTSS_SYSTEM_FLASH_POWER_DOWN_CMD_t',['../group__group__syspm__data__structures.html#gab32892682c0ebac57836e378fccf66e2',1,'btss_system.h']]],
   ['btss_5fsystem_5finterrupt_5ft',['BTSS_SYSTEM_INTERRUPT_t',['../group__group__sysint__data__structures.html#ga1245be70b0eb81b82d021596270b23cf',1,'btss_system.h']]],
   ['btss_5fsystem_5fpmu_5fsleep_5fmode_5ft',['BTSS_SYSTEM_PMU_SLEEP_MODE_t',['../group__group__syspm__data__structures.html#gabb2782f2c08fb2b5dff40b4d67eb47b6',1,'btss_system.h']]],
+  ['btss_5fsystem_5fpsram_5flpm_5fcontrol_5ft',['BTSS_SYSTEM_PSRAM_LPM_CONTROL_t',['../group__group__syspm__data__structures.html#ga2e811470e597f4bc50bf2771b2be7c99',1,'btss_system.h']]],
   ['btss_5fsystem_5fsleep_5factive_5fconfig_5ft',['BTSS_SYSTEM_SLEEP_ACTIVE_CONFIG_t',['../group__group__syspm__data__structures.html#gaa4fde7e070895bb7563db4c6e96e7a53',1,'btss_system.h']]],
   ['btss_5fsystem_5fsleep_5fconfig_5ft',['BTSS_SYSTEM_SLEEP_CONFIG_t',['../group__group__syspm__data__structures.html#ga037a0a66d38cf168be9bd0bcc0cb86f7',1,'btss_system.h']]],
   ['btss_5fsystem_5fsleep_5fpmu_5fwake_5fsrc_5ft',['BTSS_SYSTEM_SLEEP_PMU_WAKE_SRC_t',['../group__group__syspm__data__structures.html#ga39462a6ae39f68f0a4cd968cc767635a',1,'btss_system.h']]]

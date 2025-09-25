@@ -76,7 +76,7 @@ uint8_t *app_psram_skip_block_source = (uint8_t *)0x12345678;
 uint8_t thread_ap_smif_psram_Init(cy_smif_psram_device_cfg_t * psramCfg);
 BOOL32 thread_ap_smif_psram_ConfigureMemoryRegions(cy_smif_psram_mem_params_t * cfg);
 
-#endif
+#endif /* USE_PSRAM */
 
 __attribute__((section(".cy_ramfunc"))) void cy_smif_psram_config()
 {
@@ -106,14 +106,16 @@ __attribute__((section(".cy_ramfunc"))) void cy_smif_psram_config()
         psramMemCfg.lenData = ROUND_UP(app_psram_data_len,32);
 
         thread_ap_smif_psram_Init(&smifPsramConfig);
+#ifdef ENABLE_MEMCPY
 #if defined (__ARMCC_VERSION)
         memcpy(p_app_psram_begin, app_psram_skip_block_source, app_psram_code_len);
         memcpy(p_app_psram_data_begin, app_psram_data_skip_block_source, app_psram_data_len);
 #elif defined(__GNUC__)
         memcpy(p_app_psram_begin, app_psram_skip_block_source, app_psram_len);
 #endif
+#endif /* ENABLE_MEMCPY */
         thread_ap_smif_psram_ConfigureMemoryRegions(&psramMemCfg);
     }
-#endif
+#endif /* USE_PSRAM */
 }
 /* [] END OF FILE */

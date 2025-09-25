@@ -18,5 +18,9 @@ var group__group__syspm__function =
     [ "btss_smif_flash_deepPowerDown", "group__group__syspm__function.html#ga44982990b1a66e2933ae98c128bee54f", null ],
     [ "btss_smif_flash_releasePowerDown", "group__group__syspm__function.html#ga82728a7a35fa2ffac7bb10e4d0a03ccb", null ],
     [ "btss_system_overrideBtSleepInhibition", "group__group__syspm__function.html#ga6f78d120c998d864a0382e870cdc1c1e", null ],
-    [ "btss_system_isBtSleepAllowed", "group__group__syspm__function.html#ga2ba6a5acdc83934bec9a32dda8ea813a", null ]
+    [ "btss_system_isBtSleepAllowed", "group__group__syspm__function.html#ga2ba6a5acdc83934bec9a32dda8ea813a", null ],
+    [ "btss_smif_psram_isLowPowerAllowed", "group__group__syspm__function.html#ga0d76b1a00452a5266afbc9b611ad70d0", null ],
+    [ "btss_smif_psram_allowLowPowerMode", "group__group__syspm__function.html#ga18710857f9470f2b8f212a35c0fc49c9", null ],
+    [ "btss_smif_psram_enterLowPowerMode", "group__group__syspm__function.html#ga9fcf283337ed23216131162b85ddf9ae", null ],
+    [ "btss_smif_psram_exitLowPowerMode", "group__group__syspm__function.html#ga19ece3bfefb4b9cb0875f530b56bbbb6", null ]
 ];

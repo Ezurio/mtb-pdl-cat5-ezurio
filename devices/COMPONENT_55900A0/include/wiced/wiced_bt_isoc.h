@@ -21,6 +21,7 @@
 #include "wiced_bt_types.h"
 #include "wiced_result.h"
 #include "wiced_bt_cfg.h"
+#include "wiced_bt_adv_scan_common.h"
 
 /**
  * @defgroup  wicedbt_isoc        Isochronous (ISOC)
@@ -42,12 +43,13 @@
 #define WICED_BLE_ISOC_MIN_TRANSPORT_LATENCY      0x0005     /**< ISOC Minimum Latency */
 #define WICED_BLE_ISOC_MAX_TRANSPORT_LATENCY      0x0FA0     /**< ISOC Maximum Latency */
 
+/**< Data_Path_Direction */
 typedef enum
 {
     WICED_BLE_ISOC_DPD_INPUT = 0,     // ISO driver is source (Input data path (Host to Controller))
     WICED_BLE_ISOC_DPD_OUTPUT,        // ISO driver is sink (Output data path (Controller to Host))
     WICED_BLE_ISOC_DPD_MAX_DIRECTIONS // must be last
-} wiced_bt_isoc_data_path_direction_t;
+} wiced_ble_isoc_data_path_direction_t;
 
 typedef enum
 {
@@ -74,32 +76,7 @@ enum wiced_bt_isoc_packing_e
     WICED_BLE_ISOC_SEQUENTIAL_PACKING = 0,
     WICED_BLE_ISOC_INTERLEAVED_PACKING = 1
 };
-typedef uint8_t wiced_bt_isoc_packing_t; /**< ISOC packing methods (see #wiced_bt_isoc_packing_e) */
-
-/** ISOC Framing types */
-enum wiced_bt_isoc_framing_e
-{
-    WICED_BLE_ISOC_UNFRAMED = 0,
-    WICED_BLE_ISOC_FRAMED   = 1
-};
-typedef uint8_t wiced_bt_isoc_framing_t; /**< ISOC Framing types (see #wiced_bt_isoc_framing_e) */
-
-/** ISOC LE PHY */
-enum wiced_bt_isoc_phy_e
-{
-    WICED_BLE_ISOC_LE_1M_PHY = 1,
-    WICED_BLE_ISOC_LE_2M_PHY = 2,
-    WICED_BLE_ISOC_LE_CODED  = 4,
-};
-typedef uint8_t wiced_bt_isoc_phy_t; /**< ISOC LE PHY (see #wiced_bt_isoc_phy_e) */
-
-/** Broadcast ISOC Encryption */
-enum wiced_bt_isoc_encryption_e
-{
-    WICED_BLE_ISOC_UNENCRYPTED = 0,
-    WICED_BLE_ISOC_ENCRYPTED   = 1,
-};
-typedef uint8_t wiced_bt_isoc_encryption_t; /**< ISOC Encryption (see #wiced_bt_isoc_encryption_e) */
+typedef uint8_t wiced_ble_isoc_packing_t; /**< ISOC packing methods (see #wiced_bt_isoc_packing_e) */
 
 /** ISOC Events */
 enum wiced_bt_isoc_event_e
@@ -147,8 +124,8 @@ typedef struct
     uint32_t                    cis_sync_delay;         /**< CIS Sync Delay in microseconds */
     uint32_t                    latency_c_to_p;         /**< Maximum time, in microseconds, for an SDU to be transported from the master Controller to slave Controller */
     uint32_t                    latency_p_to_c;         /**< Maximum time, in microseconds, for an SDU to be transported from the slave Controller to master Controller */
-    wiced_bt_isoc_phy_t     phy_c_to_p;             /**< The transmitter PHY of packets from the master */
-    wiced_bt_isoc_phy_t     phy_p_to_c;             /**< The transmitter PHY of packets from the slave */
+    wiced_ble_isoc_phy_t     phy_c_to_p;             /**< The transmitter PHY of packets from the master */
+    wiced_ble_isoc_phy_t     phy_p_to_c;             /**< The transmitter PHY of packets from the slave */
     uint8_t                     nse;                    /**< Maximum Number of Subevent in each isochronous event */
     uint8_t                     bn_c_to_p;              /**< Burst number for master to slave transmission */
     uint8_t                     bn_p_to_c;              /**< Burst number for slave to master transmission */
@@ -182,7 +159,7 @@ typedef struct
 {
     uint8_t status; /**< Data path Status  (0 = Success). Refer Core Spec v5.2 [Vol 1] Part F, Controller Error Codes */
     uint16_t conn_hdl;                                 /**< CIS/BIS Connection Handle  */
-    wiced_bt_isoc_data_path_direction_t data_path_dir; /**< data path direction (valid for data path setup only) */
+    wiced_ble_isoc_data_path_direction_t data_path_dir; /**< data path direction (valid for data path setup only) */
 } wiced_bt_isoc_data_path_status_t;
 
 /** ISOC BIG Terminate/Sync_Lost Event Data */
@@ -213,7 +190,7 @@ typedef struct
 {
     wiced_bt_isoc_big_sync_established_t sync_data; /**< BIG Sync Data */
     uint32_t sync_delay;                            /**< BIG Sync Delay in microseconds */
-    wiced_bt_isoc_phy_t phy;                    /**< The transmitter PHY of packets */
+    wiced_ble_isoc_phy_t phy;                    /**< The transmitter PHY of packets */
 } wiced_bt_isoc_create_big_complete_t;
 
 /** ISOC Event Data */
@@ -239,8 +216,8 @@ typedef struct
                                                        Valid Range 0x000 to 0xFFF*/
     uint16_t                    max_sdu_p_to_c;   /**< Maximum size, in octets, of an SDU from the slave’s Host
                                                        Valid Range 0x000 to 0xFFF*/
-    wiced_bt_isoc_phy_t     phy_c_to_p;       /**< The transmitter PHY of packets from the master */
-    wiced_bt_isoc_phy_t     phy_p_to_c;       /**< The transmitter PHY of packets from the slave */
+    wiced_ble_isoc_phy_t     phy_c_to_p;       /**< The transmitter PHY of packets from the master */
+    wiced_ble_isoc_phy_t     phy_p_to_c;       /**< The transmitter PHY of packets from the slave */
     uint8_t                     rtn_c_to_p;       /**< Maximum number of times every CIS Data PDU should be retransmitted from the master to slave */
     uint8_t                     rtn_p_to_c;       /**< Maximum number of times every CIS Data PDU should be retransmitted from the slave to master */
 }wiced_bt_ble_cis_config_t;
@@ -254,8 +231,8 @@ typedef struct
     uint8_t                     peripheral_clock_accuracy;       /**< Slave Clock Accuracy */
     uint16_t                    max_trans_latency_c_to_p;   /**< Maximum time, in microseconds, for an SDU to be transported from the master Controller to slave Controller */
     uint16_t                    max_trans_latency_p_to_c;   /**< Maximum time, in microseconds, for an SDU to be transported from the slave Controller to master Controller */
-    wiced_bt_isoc_packing_t packing;                    /**< Packing method  */
-    wiced_bt_isoc_framing_t framing;                    /**< Framing parameter */
+    wiced_ble_isoc_packing_t packing;                    /**< Packing method  */
+    wiced_ble_isoc_framing_t framing;                    /**< Framing parameter */
     uint8_t                     cis_count;                  /**< Total number of CISes in the CIG being added or modified
                                                                   Valid Range 0x00 to 0x10 */
     wiced_bt_ble_cis_config_t   *p_cis_config_list;           /**< CIS configurations */
@@ -269,8 +246,8 @@ typedef struct
     uint16_t max_sdu_p_to_c;            /**< Maximum size, in octets, of an SDU from the slave’s Host Valid Range 0x000 to 0xFFF*/
     uint16_t max_pdu_c_to_p;            /**< Maximum size, in bytes, of an SDU from the master’s Host Valid Range 0x000 to 0xFFF*/
     uint16_t max_pdu_p_to_c;            /**< Maximum size, in octets, of an SDU from the slave’s Host Valid Range 0x000 to 0xFFF*/
-    wiced_bt_isoc_phy_t phy_c_to_p; /**< The transmitter PHY of packets from the master */
-    wiced_bt_isoc_phy_t phy_p_to_c; /**< The transmitter PHY of packets from the slave */
+    wiced_ble_isoc_phy_t phy_c_to_p; /**< The transmitter PHY of packets from the master */
+    wiced_ble_isoc_phy_t phy_p_to_c; /**< The transmitter PHY of packets from the slave */
     uint8_t bn_c_to_p;                  /**< Maximum number of times every CIS Data PDU should be retransmitted from the master to slave */
     uint8_t bn_p_to_c;                  /**< Maximum number of times every CIS Data PDU should be retransmitted from the slave to master */
 } wiced_bt_ble_cis_config_test_t;
@@ -284,8 +261,8 @@ typedef struct
     uint8_t ft_p_to_c;            /**< The flush timeout in multiples of ISO_Interval for each payload sent from the slave to master. */
     uint16_t iso_interval;        /**< Time between consecutive CIS anchor points */
     uint8_t peripheral_clock_accuracy;               /**< Slave Clock Accuracy */
-    wiced_bt_isoc_packing_t packing;        /**< Packing method  */
-    wiced_bt_isoc_framing_t framing;        /**< Framing parameter */
+    wiced_ble_isoc_packing_t packing;        /**< Packing method  */
+    wiced_ble_isoc_framing_t framing;        /**< Framing parameter */
     uint8_t cis_count;                          /**< Total number of CISes in the CIG being added or modified Valid Range 0x00 to 0x10 */
     wiced_bt_ble_cis_config_test_t *p_cis_config_list; /**< CIS configurations */
 } wiced_bt_ble_cig_param_test_t;
@@ -649,12 +626,12 @@ wiced_bool_t wiced_bt_isoc_remove_data_path(uint16_t conn_hdl,
  *
  * @param cig_id CIG identifier
  * @param cis_id CIS identifier
- * @param data_path_dir INPUT/OUTPUT see #wiced_bt_isoc_data_path_direction_t
+ * @param data_path_dir INPUT/OUTPUT see #wiced_ble_isoc_data_path_direction_t
  * @return wiced_bool_t
  */
 wiced_bool_t wiced_bt_isoc_is_data_path_active(uint8_t cig_id,
                                                uint8_t cis_id,
-                                               wiced_bt_isoc_data_path_direction_t data_path_dir);
+                                               wiced_ble_isoc_data_path_direction_t data_path_dir);
 
 /**
  * @brief
@@ -680,7 +657,7 @@ uint16_t wiced_bt_isoc_get_cis_conn_handle(uint8_t cig_id, uint8_t cis_id);
  *
  * @param conn_hdl CIS/BIS Connection handle
  * @param is_cis TRUE if CIS connection handle is provided
- * @param data_path_dir see #wiced_bt_isoc_data_path_direction_t
+ * @param data_path_dir see #wiced_ble_isoc_data_path_direction_t
  * @param data_path_id see #wiced_bt_isoc_data_path_id_t
  * @param controller_delay select a suitable Controller_Delay value from the range of values
  *                         provided by the HCI_Read_Local_Supported_Controller_Delay command
@@ -688,7 +665,7 @@ uint16_t wiced_bt_isoc_get_cis_conn_handle(uint8_t cig_id, uint8_t cis_id);
  */
 wiced_bool_t wiced_bt_isoc_setup_data_path(uint16_t conn_hdl,
                                            wiced_bool_t is_cis,
-                                           wiced_bt_isoc_data_path_direction_t data_path_dir,
+                                           wiced_ble_isoc_data_path_direction_t data_path_dir,
                                            wiced_bt_isoc_data_path_id_t data_path_id,
                                            uint32_t controller_delay);
 

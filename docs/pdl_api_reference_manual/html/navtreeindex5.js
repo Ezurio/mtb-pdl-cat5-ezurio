@@ -1,5 +1,14 @@
 var NAVTREEINDEX5 =
 {
+"group__group__tcpwm__functions__quaddec.html#gabaf6e9fd4b30c5bf35cf45ff3ab57f68":[1,7,3,1,1],
+"group__group__tcpwm__functions__quaddec.html#gac0819a3dafbb55d93d00ab68db3f3f53":[1,7,3,1,6],
+"group__group__tcpwm__functions__quaddec.html#gaf0580390faff1cb686a5cd1b9fef6cf4":[1,7,3,1,23],
+"group__group__tcpwm__functions__shiftreg.html":[1,7,4,1],
+"group__group__tcpwm__functions__shiftreg.html#ga02136c4ff9a12ef1709cd3b3aede46b3":[1,7,4,1,3],
+"group__group__tcpwm__functions__shiftreg.html#ga0a85feba92416e04dac2d57f7b1657d6":[1,7,4,1,16],
+"group__group__tcpwm__functions__shiftreg.html#ga291cd2d49e11dc04e9823d62351a998e":[1,7,4,1,14],
+"group__group__tcpwm__functions__shiftreg.html#ga2d444836d6c8015b59fbad627190f7f5":[1,7,4,1,8],
+"group__group__tcpwm__functions__shiftreg.html#ga371b9f1aaf90d7ec07bf096de7639cc6":[1,7,4,1,17],
 "group__group__tcpwm__functions__shiftreg.html#ga45c50325effedc0dc9a4805fe287c2bd":[1,7,4,1,2],
 "group__group__tcpwm__functions__shiftreg.html#ga60c880de59e5bbc0ab3bf9bbe404966a":[1,7,4,1,12],
 "group__group__tcpwm__functions__shiftreg.html#ga62e3ebf5e164e1a69c771305b0f48fd7":[1,7,4,1,15],
@@ -240,14 +249,5 @@ var NAVTREEINDEX5 =
 "group__group__tdm__functions.html#ga7bf74c6484e6b1501acd3e3ee779bb38":[1,8,4,17],
 "group__group__tdm__functions.html#ga7c1eed216035acd7f0bbaf3e1575d058":[1,8,4,14],
 "group__group__tdm__functions.html#ga8a4b09c7ab78ba748c3f492a5c5baafa":[1,8,4,15],
-"group__group__tdm__functions.html#ga8d9877d0f71e189752a3e56ffe997a3b":[1,8,4,6],
-"group__group__tdm__functions.html#ga8f2d5410c79247b147ab13dcce469359":[1,8,4,20],
-"group__group__tdm__functions.html#ga8facb87e8dcd4a87be8edd7cbe623ad9":[1,8,4,5],
-"group__group__tdm__functions.html#ga96f70d0e8eb752eebf31ce77d4ad2632":[1,8,4,0],
-"group__group__tdm__functions.html#ga9a7179ac79cf588bc83c50b493b2e4c3":[1,8,4,8],
-"group__group__tdm__functions.html#ga9ad9e21735e8db70bde439740e2e6adc":[1,8,4,19],
-"group__group__tdm__functions.html#ga9bc32759c43f82ed3f697ff7f81b52fe":[1,8,4,22],
-"group__group__tdm__functions.html#ga9e7cf53fc17a136532eded44e6804cb3":[1,8,4,39],
-"group__group__tdm__functions.html#gaa07d752316baa1b2965c3ef005efa41c":[1,8,4,21],
-"group__group__tdm__functions.html#gab1d04392a20db66777ea5f9f69675f4e":[1,8,4,10]
+"group__group__tdm__functions.html#ga8d9877d0f71e189752a3e56ffe997a3b":[1,8,4,6]
 };

@@ -134,5 +134,10 @@ var group__group__smif__enums =
     [ "cy_en_smif_bridge_xip_space_t", "group__group__smif__enums.html#ga7bca582b1a4fa65765ac17cf2ad98242", null ],
     [ "cy_en_smif_bridge_remap_type_t", "group__group__smif__enums.html#ga88167c6d27cc2a1260e162eb660cfd69", null ],
     [ "cy_en_smif_bridge_interleave_step_t", "group__group__smif__enums.html#ga37705a366bb121c75080a7a831b70bea", null ],
-    [ "cy_en_smif_bridge_remap_region_size_t", "group__group__smif__enums.html#gad786eeb67bcea60b35ae8ecd48ffaf82", null ]
+    [ "cy_en_smif_bridge_remap_region_size_t", "group__group__smif__enums.html#gad786eeb67bcea60b35ae8ecd48ffaf82", null ],
+    [ "cy_smif_dev_lowpower_ctrl_t", "group__group__smif__enums.html#gafc296e1e7361b4d2bec7de974a2c78cf", [
+      [ "CY_SMIF_DEV_LPM_CTRL_DISALLOW", "group__group__smif__enums.html#ggafc296e1e7361b4d2bec7de974a2c78cfa23f418305cc504eaec0adf48d2e629e4", null ],
+      [ "CY_SMIF_DEV_LPM_CTRL_BY_APP", "group__group__smif__enums.html#ggafc296e1e7361b4d2bec7de974a2c78cfa551a49af0c95facddb0a428546c27867", null ],
+      [ "CY_SMIF_DEV_LPM_CTRL_BY_BTSS", "group__group__smif__enums.html#ggafc296e1e7361b4d2bec7de974a2c78cfa62c4f7f02f8ff63ca5beb95318ad50c0", null ]
+    ] ]
 ];

@@ -24,7 +24,7 @@ var group__wicedbt___extended =
       [ "adv_sid", "structwiced__ble__ext__adv__params__t.html#a6b502f81c300bea1d0426f8c38ff75cc", null ],
       [ "adv_tx_power", "structwiced__ble__ext__adv__params__t.html#a9dff0a9369cee709d7906b318aba5122", null ],
       [ "event_properties", "structwiced__ble__ext__adv__params__t.html#ac51444ad9591c4216f1b85c47e209bc4", null ],
-      [ "own_addr_type", "structwiced__ble__ext__adv__params__t.html#a7dd095970ad61ccd9f80bdd2412f0682", null ],
+      [ "own_addr_type", "structwiced__ble__ext__adv__params__t.html#a987336cc4117dcbbc087c2060f7907d1", null ],
       [ "peer_addr", "structwiced__ble__ext__adv__params__t.html#a6b0aeb40f86b9bef5e74a30d4f85c83e", null ],
       [ "peer_addr_type", "structwiced__ble__ext__adv__params__t.html#aed461f8c17a7d803d6155108b264d126", null ],
       [ "primary_adv_channel_map", "structwiced__ble__ext__adv__params__t.html#a632c7bc5a6daeea416d5524da670d133", null ],
@@ -51,7 +51,7 @@ var group__wicedbt___extended =
       [ "adv_handle", "structwiced__ble__ext__conn__cfg__t.html#a96dc09ff81c490ab93ccf8145b2f9429", null ],
       [ "init_filter_policy", "structwiced__ble__ext__conn__cfg__t.html#a5abf2d12d08104ed3f6eedbf34cb42c9", null ],
       [ "initiating_phys", "structwiced__ble__ext__conn__cfg__t.html#adfe6df885549c24dfcfdfca60aae1c03", null ],
-      [ "own_addr_type", "structwiced__ble__ext__conn__cfg__t.html#a7dd095970ad61ccd9f80bdd2412f0682", null ],
+      [ "own_addr_type", "structwiced__ble__ext__conn__cfg__t.html#a987336cc4117dcbbc087c2060f7907d1", null ],
       [ "peer_addr", "structwiced__ble__ext__conn__cfg__t.html#a6b0aeb40f86b9bef5e74a30d4f85c83e", null ],
       [ "peer_addr_type", "structwiced__ble__ext__conn__cfg__t.html#aed461f8c17a7d803d6155108b264d126", null ],
       [ "phy_options", "structwiced__ble__ext__conn__cfg__t.html#ac1661bf3016a3a4e46ef2e5445c865fc", null ],
@@ -65,15 +65,15 @@ var group__wicedbt___extended =
     ] ],
     [ "wiced_ble_biginfo_adv_report_t", "structwiced__ble__biginfo__adv__report__t.html", [
       [ "burst_number", "structwiced__ble__biginfo__adv__report__t.html#ab8386639e71d0e659a0b9c9953a503b5", null ],
-      [ "encryption", "structwiced__ble__biginfo__adv__report__t.html#af29e48a96ba947f00e46b575b3fb8094", null ],
-      [ "framing", "structwiced__ble__biginfo__adv__report__t.html#a28c8b1cd1796e1f4df6722452edbe013", null ],
+      [ "encryption", "structwiced__ble__biginfo__adv__report__t.html#a903c2cabd0336ce22c3a0c2917870060", null ],
+      [ "framing", "structwiced__ble__biginfo__adv__report__t.html#ab75ebbb762590b9a775696c6e33c02fa", null ],
       [ "immediate_repetition_count", "structwiced__ble__biginfo__adv__report__t.html#a6a0eccf160704000ee50c066eaf44673", null ],
       [ "iso_interval", "structwiced__ble__biginfo__adv__report__t.html#a49e7eb174320231deae5ec255b46e5d7", null ],
       [ "max_pdu", "structwiced__ble__biginfo__adv__report__t.html#a48d197981ed5936d02dada20765728a9", null ],
       [ "max_sdu", "structwiced__ble__biginfo__adv__report__t.html#a4b5effde26a738c2ddaad78c595bf745", null ],
       [ "num_bis", "structwiced__ble__biginfo__adv__report__t.html#aa4268b28c0bd9d2cb94fb0bd5c3d75f8", null ],
       [ "number_of_subevents", "structwiced__ble__biginfo__adv__report__t.html#ac624853cd75116829fa4215be7840b66", null ],
-      [ "phy", "structwiced__ble__biginfo__adv__report__t.html#a266d02eac9935e2e0d5175fe05ef8942", null ],
+      [ "phy", "structwiced__ble__biginfo__adv__report__t.html#a442d4d53ba7febc7f462c696870b5965", null ],
       [ "pretransmission_offset", "structwiced__ble__biginfo__adv__report__t.html#a5c8be75793730602e1b6661199239a99", null ],
       [ "sdu_interval", "structwiced__ble__biginfo__adv__report__t.html#a5deb456f7b123a002ef3560121647881", null ],
       [ "sync_handle", "structwiced__ble__biginfo__adv__report__t.html#a9099921875490bea15106c28d062c865", null ]
@@ -84,8 +84,8 @@ var group__wicedbt___extended =
       [ "scan_window", "structwiced__ble__ext__scan__phy__params__t.html#a85da8bab044d1c19454c091830144e06", null ]
     ] ],
     [ "wiced_ble_ext_scan_params_t", "structwiced__ble__ext__scan__params__t.html", [
-      [ "own_addr_type", "structwiced__ble__ext__scan__params__t.html#a7dd095970ad61ccd9f80bdd2412f0682", null ],
-      [ "scan_filter_policy", "structwiced__ble__ext__scan__params__t.html#a3372dcc2d97f41d6f356f7b183c93c1a", null ],
+      [ "own_addr_type", "structwiced__ble__ext__scan__params__t.html#a987336cc4117dcbbc087c2060f7907d1", null ],
+      [ "scan_filter_policy", "structwiced__ble__ext__scan__params__t.html#adbb8bf1d519099b74eac478842b6b1ad", null ],
       [ "scanning_phys", "structwiced__ble__ext__scan__params__t.html#ad377042252e73d2f4ca8452e7c531167", null ],
       [ "sp_1m", "structwiced__ble__ext__scan__params__t.html#a22377c833791b97e4a664f84d15cc3d1", null ],
       [ "sp_le_coded_phy", "structwiced__ble__ext__scan__params__t.html#aa922c6e3be81ac6dad548f771c55257e", null ]
@@ -135,8 +135,7 @@ var group__wicedbt___extended =
     [ "wiced_ble_ext_adv_scan_req_notification_setting_t", "group__wicedbt___extended.html#ga3b83742555cd70b48c8a806ed0e476f5", null ],
     [ "wiced_ble_ext_conn_initiator_filter_policy_t", "group__wicedbt___extended.html#ga0032c35cacd9e9f9b6d59ed74c619cd2", null ],
     [ "wiced_ble_ext_scan_filter_duplicate_t", "group__wicedbt___extended.html#ga0a28d15fe3b809934fea4f8585c20cb1", null ],
-    [ "wiced_ble_ext_scan_result_cback_t", "group__wicedbt___extended.html#ga1c898ca5d662255dfe3494c928d4cc93", null ],
-    [ "wiced_ble_ext_scanning_filter_policy_t", "group__wicedbt___extended.html#ga37a6ed519971c393b510b2a4900fc441", [
+    [ "wiced_ble_ext_scan_result_cback_t", "group__wicedbt___extended.html#ga1c898ca5d662255dfe3494c928d4cc93", [
       [ "BTM_BLE_EXT_EVT_CONNECTABLE_ADVERTISEMENT", "group__wicedbt___extended.html#ggabc6126af1d45847bc59afa0aa3216b04a0af5378747dd3a25a7b361ebbe983821", null ],
       [ "BTM_BLE_EXT_EVT_SCANNABLE_ADVERTISEMENT", "group__wicedbt___extended.html#ggabc6126af1d45847bc59afa0aa3216b04ac881de42938238d757d5eb1d24b9dc43", null ],
       [ "BTM_BLE_EXT_EVT_DIRECTED_ADVERTISEMENT", "group__wicedbt___extended.html#ggabc6126af1d45847bc59afa0aa3216b04a0de12bba5b4fa9c2ed36cecc80906eac", null ],
@@ -196,6 +195,7 @@ var group__wicedbt___extended =
       [ "WICED_BLE_EXT_SCAN_EXTENDED_UNFILTERED_SP", "group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaa517c5757cdc0f3e7b93f7525c6a5f118", null ],
       [ "WICED_BLE_EXT_SCAN_EXTENDED_FILTERED_SP", "group__wicedbt___extended.html#gga0483a0344a8bc72119c84e6ab95111eaad3b0ab649915838fbf913ba83ea3010f", null ]
     ] ],
+    [ "wiced_ble_cancel_connection", "group__wicedbt___extended.html#ga17d3a85eb558ee853bbeac1ddc94d1e8", null ],
     [ "wiced_ble_ext_adv_clear_adv_sets", "group__wicedbt___extended.html#gae248d9ef177b922584ad8472186d851d", null ],
     [ "wiced_ble_ext_adv_enable", "group__wicedbt___extended.html#ga6bb6ba45440ce0dec53ccb226139d1bc", null ],
     [ "wiced_ble_ext_adv_register_cback", "group__wicedbt___extended.html#gab81b607c21afc5fc637ad6dea217963d", null ],

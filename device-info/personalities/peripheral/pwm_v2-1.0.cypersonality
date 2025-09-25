@@ -191,8 +191,10 @@
     <ParamBool id="InterruptCC1" name="Compare 1" group="Interrupt Source" default="false" visible="`${pCntCC1}`" editable="true" desc="Generates interrupt when counter value matches with compare 1 value" />
     <ParamString id="InterruptSource" name="InterruptSource" desc="InterruptSource" group="Interrupt Source" default="(CY_TCPWM_INT_ON_TC `${(InterruptTC)? &quot;&quot; : &quot;&amp; 0U&quot;}`) | (CY_TCPWM_INT_ON_CC0 `${(InterruptCC0)? &quot;&quot; : &quot;&amp; 0U&quot;}`) | (CY_TCPWM_INT_ON_CC1 `${(InterruptCC1)? &quot;&quot; : &quot;&amp; 0U&quot;}`)" visible="false" editable="false" />
     <!--Inputs-->
-    <ParamSignal port="clock[0]" name="Clock Signal" group="Inputs" visible="`${hasVisibleOption(&quot;clock[0]&quot;)}`" desc="The clock input defines the operating frequency." canBeEmpty="`${!hasVisibleOption(&quot;clock[0]&quot;)}`" />
-    <ParamSignal port="clock_counter_en[0]" name="Clock Signal" group="Inputs" visible="`${hasVisibleOption(&quot;clock_counter_en[0]&quot;)}`" desc="The clock input defines the operating frequency." canBeEmpty="`${!hasVisibleOption(&quot;clock_counter_en[0]&quot;)}`" />
+      <ParamSignal port="clock[0]" name="Clock Signal" group="Inputs" visible="`${hasVisibleOption(&quot;clock[0]&quot;)}`" desc="The clock input defines the operating frequency." canBeEmpty="`${!hasVisibleOption(&quot;clock[0]&quot;)}`" />
+	  <ParamBool id="hasConnection_clock" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;clock&quot;, 0)}`" visible="false" editable="false" desc="" />
+      <ParamSignal port="clock_counter_en[0]" name="Clock Signal" group="Inputs" visible="`${hasVisibleOption(&quot;clock_counter_en[0]&quot;)}`" desc="The clock input defines the operating frequency." canBeEmpty="`${!hasVisibleOption(&quot;clock_counter_en[0]&quot;)}`" />
+      <ParamBool id="hasConnection_clock_counter_en" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;clock_counter_en&quot;, 0)}`" visible="false" editable="false" desc="" />
 
     <ParamChoice id="CountInput" name="Count Input" group="Inputs" default="CY_TCPWM_INPUT_DISABLED" visible="`${pPwmNePrs}`" editable="true" desc="Determines if a count input is needed and how that input is registered." >
       <Entry name="Rising Edge" value="CY_TCPWM_INPUT_RISINGEDGE" visible="true" />
@@ -204,6 +206,7 @@
     <ParamSignal port="count[0]" name="Count Signal" group="Inputs" visible="`${((pPwmNePrs) &amp;&amp; (CountInput ne CY_TCPWM_INPUT_DISABLED))}`" desc="This digital input causes the PWM to count depending on how the it is configured." canBeEmpty="`${CountInput eq CY_TCPWM_INPUT_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+    <ParamBool id="hasConnection_count" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;count&quot;, 0)}`" visible="false" editable="false" desc="" />
     <ParamChoice id="Kill0Input" name="Kill Input" group="Inputs" default="CY_TCPWM_INPUT_DISABLED" visible="true" editable="true" desc="Determines how the kill 0 input behaves." >
       <Entry name="Rising Edge" value="CY_TCPWM_INPUT_RISINGEDGE" visible="true" />
       <Entry name="Falling Edge" value="CY_TCPWM_INPUT_FALLINGEDGE" visible="true" />
@@ -214,6 +217,7 @@
     <ParamSignal port="stop[0]" name="Kill Signal" group="Inputs" visible="`${Kill0Input ne CY_TCPWM_INPUT_DISABLED}`" desc="This digital input kills the PWM, based on the Kill0 Input selection." canBeEmpty="`${Kill0Input eq CY_TCPWM_INPUT_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+	<ParamBool id="hasConnection_stop" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;stop&quot;, 0)}`" visible="false" editable="false" desc="" />
     <ParamChoice id="ReloadInput" name="Reload Input" group="Inputs" default="CY_TCPWM_INPUT_DISABLED" visible="true" editable="true" desc="Determines if a reload input is needed and how the reload signal input is registered." >
       <Entry name="Rising Edge" value="CY_TCPWM_INPUT_RISINGEDGE" visible="true" />
       <Entry name="Falling Edge" value="CY_TCPWM_INPUT_FALLINGEDGE" visible="true" />
@@ -224,6 +228,7 @@
     <ParamSignal port="reload[0]" name="Reload Signal" group="Inputs" visible="`${ReloadInput ne CY_TCPWM_INPUT_DISABLED}`" desc="This digital input triggers a reload of the PWM, and starts the PWM." canBeEmpty="`${ReloadInput eq CY_TCPWM_INPUT_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+	<ParamBool id="hasConnection_reload" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;reload&quot;, 0)}`" visible="false" editable="false" desc="" />
     <ParamChoice id="StartInput" name="Start Input" group="Inputs" default="CY_TCPWM_INPUT_DISABLED" visible="true" editable="true" desc="Determines if a start input is needed and how that input is registered." >
       <Entry name="Rising Edge" value="CY_TCPWM_INPUT_RISINGEDGE" visible="true" />
       <Entry name="Falling Edge" value="CY_TCPWM_INPUT_FALLINGEDGE" visible="true" />
@@ -233,6 +238,7 @@
     <ParamSignal port="start[0]" name="Start Signal" group="Inputs" visible="`${StartInput ne CY_TCPWM_INPUT_DISABLED}`" desc="This digital input triggers a Start of the PWM." canBeEmpty="`${StartInput eq CY_TCPWM_INPUT_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+	<ParamBool id="hasConnection_start" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;start&quot;, 0)}`" visible="false" editable="false" desc="" />
     <ParamChoice id="SwapInput" name="Swap Input" group="Inputs" default="CY_TCPWM_INPUT_DISABLED" visible="true" editable="true" desc="This input controls when compare and period swaps occur." >
       <Entry name="Rising Edge" value="CY_TCPWM_INPUT_RISINGEDGE" visible="true" />
       <Entry name="Falling Edge" value="CY_TCPWM_INPUT_FALLINGEDGE" visible="true" />
@@ -242,6 +248,8 @@
     <ParamSignal port="capture0[0]" name="Swap Signal" group="Inputs" visible="`${SwapInput ne CY_TCPWM_INPUT_DISABLED}`" desc="This input latches a SWAP command. The swap doesn’t occur until the next Overflow/Underflow event." canBeEmpty="`${SwapInput eq CY_TCPWM_INPUT_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+	<ParamBool id="hasConnection_capture0" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;capture0&quot;, 0)}`" visible="false" editable="false" desc="" />
+
 	 <ParamChoice id="Kill1Input" name="Kill 1 Input" group="Inputs" default="CY_TCPWM_INPUT_DISABLED" visible="`${pCntCC1}`" editable="true" desc="Determines how the kill 1 input behaves." >
       <Entry name="Rising Edge" value="CY_TCPWM_INPUT_RISINGEDGE" visible="true" />
       <Entry name="Falling Edge" value="CY_TCPWM_INPUT_FALLINGEDGE" visible="true" />
@@ -252,6 +260,7 @@
     <ParamSignal port="capture1[0]" name="Kill 1 Signal" group="Inputs" visible="`${Kill1Input ne CY_TCPWM_INPUT_DISABLED}`" desc="This digital input kills the PWM, based on the Kill1 Input selection." canBeEmpty="`${Kill1Input eq CY_TCPWM_INPUT_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
 	</ParamSignal>
+    <ParamBool id="hasConnection_capture1" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;capture1&quot;, 0)}`" visible="false" editable="false" desc="" />
 
     <!--Kill Mode-->
     <ParamChoice id="KillMode" name="Kill Mode" group="Kill Mode" default="CY_TCPWM_PWM_STOP_ON_KILL" visible="`${Kill0Input ne CY_TCPWM_INPUT_DISABLED}`" editable="true" desc="Determines what the kill signal does to the PWM." >
@@ -293,6 +302,7 @@
     <ParamSignal port="tr_out0[0]" name="Trigger 0 Signal" group="Trigger Outputs" visible="`${trigger0Event ne CY_TCPWM_CNT_TRIGGER_ON_DISABLED}`" desc="Signals to connect on Trigger 0 Event" canBeEmpty="`${trigger0Event eq CY_TCPWM_CNT_TRIGGER_ON_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+    <ParamBool id="hasConnection_tr_out0" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;tr_out0&quot;, 0)}`" visible="false" editable="false" desc="" />
     <ParamChoice id="trigger1Event" name="Trigger 1 Event" group="Trigger Outputs" default="CY_TCPWM_CNT_TRIGGER_ON_DISABLED" visible="true" editable="true" desc="This output used to connect TCPWM event signals to other peripherals." >
       <Entry name="Overflow" value="CY_TCPWM_CNT_TRIGGER_ON_OVERFLOW" visible="`${PwmMode ne CY_TCPWM_PWM_MODE_PSEUDORANDOM}`" />
       <Entry name="Underflow" value="CY_TCPWM_CNT_TRIGGER_ON_UNDEFLOW" visible="`${PwmMode ne CY_TCPWM_PWM_MODE_PSEUDORANDOM}`" />
@@ -305,6 +315,9 @@
     <ParamSignal port="tr_out1[0]" name="Trigger 1 Signal" group="Trigger Outputs" visible="`${trigger1Event ne CY_TCPWM_CNT_TRIGGER_ON_DISABLED}`" desc="Signals to connect on Trigger 1 Event " canBeEmpty="`${trigger1Event eq CY_TCPWM_CNT_TRIGGER_ON_DISABLED}`" >
       <Constraint type="ACCEPT" targetLocation=".*" valid="true" />
     </ParamSignal>
+	<ParamBool id="hasConnection_tr_out1" name="Has aux connection" group="Internal" default="`${hasConnection(&quot;tr_out1&quot;, 0)}`" visible="false" editable="false" desc="" />
+    <ParamBool id="hasConnectionEnabled" name="Has aux connection" group="Internal" default="`${hasConnection_capture0 || hasConnection_capture1 || hasConnection_clock || hasConnection_clock_counter_en || hasConnection_count || hasConnection_stop || hasConnection_reload || hasConnection_start || hasConnection_tr_out0 || hasConnection_tr_out1}`" visible="false" editable="false" desc="" />
+
 
     <!--Config-->
     <ParamBool id="inFlash" name="Store Config in Flash" group="Advanced" default="true" visible="true" editable="true" desc="Controls whether the configuration structure is stored in flash (const, true) or SRAM (not const, false)." />
@@ -457,7 +470,7 @@
   <ConfigFirmware>
     <ConfigInclude value="cy_tcpwm_pwm.h" include="true" />
 		  <!--    <ConfigInclude value="cy_sysclk.h" include="`${pclkOk}`" /> -->
-    <ConfigInclude value="cycfg_routing.h" include="true" />
+    <ConfigInclude value="cycfg_routing.h" include="`${hasConnectionEnabled}`" />
     <ConfigInclude value="cyhal_hwmgr.h" include="true" guard="defined (CY_USING_HAL)" />
     <ConfigInclude value="cyhal.h" include="true" guard="defined (CY_USING_HAL)" />
     <ConfigInclude value="cyhal_hw_types.h" include="true" guard="defined (CY_USING_HAL_LITE)" />

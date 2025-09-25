@@ -86,7 +86,7 @@
       <Entry name="6 bits" value="6" visible="true" />
       <Entry name="7 bits" value="7" visible="true" />
       <Entry name="8 bits" value="8" visible="true" />
-      <Entry name="9 bits" value="9" visible="true" />
+      <Entry name="9 bits" value="9" visible="`${Standard}`" />
     </ParamChoice>
     <ParamChoice id="ParityType" name="Parity" group="General" default="CY_SCB_UART_PARITY_NONE" visible="`${Standard &amp;&amp; (DataWidth ne 9)}`" editable="true" desc="This parameter defines the functionality of the parity bit location in the transfer as None, Odd or Even.">
       <Entry name="Even" value="CY_SCB_UART_PARITY_EVEN" visible="true" />
@@ -195,7 +195,7 @@
     <ParamRange id="TxTriggerLevel" name="TX FIFO Level" group="Trigger Level" default="63" min="0" max="`${FifoLevelMax}`" resolution="1" visible="true" editable="true" desc="This parameter determines the behavior of the signal which drives the TX FIFO below-level interrupt source and TX Trigger Output as follows: until the number of data elements in the TX FIFO is less than the value of TX FIFO level. For example, the TX FIFO has 0 data elements (empty) and the TX FIFO level is 7. The signal remains active until TX FIFO has 7 data elements. The range: 0 – `${FifoLevelByte}` (when Data Width is less or equal 8), and 0 - `${FifoLevelHalfword}` otherwise." />
 
     <!--Multi Processor Mode-->
-    <ParamBool id="MultiProc" name="Enable Multi Processor Mode" group="Multi Processor Mode" default="false" visible="`${!SmartCard}`" editable="true" desc="This parameter enables the UART multi-processor mode. Only applicable when Com Mode is Standard." />
+    <ParamBool id="MultiProc" name="Enable Multi Processor Mode" group="Multi Processor Mode" default="false" visible="`${!SmartCard &amp;&amp; (!IrDA)}`" editable="true" desc="This parameter enables the UART multi-processor mode. Only applicable when Com Mode is Standard." />
 	<ParamRange id="MpRxAddress" name="Address" group="Multi Processor Mode" default="0" min="0" max="255" resolution="1" visible="`${(SmartCard)?false:(MultiProc)?true:false}`" editable="true" desc="This parameter specifies the UART address. Only applicable when the Enable Multi Processor Mode parameter is true." />
  <!-- <ParamString id="DbgString" name="Dbg" default="`${(SmartCard)?false:(MultiProc)?true:false}`" editable="false" visible="true" desc="" group="Multi Processor Mode"/> -->
  <ParamRange id="MpRxAddressMask" name="Mask" group="Multi Processor Mode" default="255" min="0" max="255" resolution="1" visible="`${(SmartCard)?false:(MultiProc)?true:false}`" editable="true" desc="This parameter specifies the UART address mask. Only applicable when the Enable Multi Processor Mode parameter is true.
@@ -205,7 +205,7 @@
 
     <!-- Drop options -->
     <ParamBool id="DropOnFrameErr" name="Drop on Frame Error" group="Advanced" default="false" visible="true" editable="true" desc="This parameter determines if the data is dropped from the RX FIFO on a frame error event." />
-	<ParamBool id="DropOnParityErr" name="Drop on Parity Error" group="Advanced" default="false" visible="`${(ParityType ne CY_SCB_UART_PARITY_NONE)}`" editable="true" desc="This parameter determines if the data is dropped from the RX FIFO on a parity error event." />
+	<ParamBool id="DropOnParityErr" name="Drop on Parity Error" group="Advanced" default="false" visible="`${((Standard) &amp;&amp; (ParityType ne CY_SCB_UART_PARITY_NONE)) || (SmartCard)}`" editable="true" desc="This parameter determines if the data is dropped from the RX FIFO on a parity error event." />
 
     <!--Break Width-->
     <ParamRange id="BreakSignalBits" name="Break Signal Bits" group="Advanced" default="11" min="7" max="16" resolution="1" visible="`${Standard}`" editable="true" desc="This parameter specifies the break width in bits. The range: 7-16." />
@@ -270,10 +270,6 @@
     <!-- DRC: 8-bit clock divider must not be used -->
     <!--DRC type="ERROR" text="Wider clock divider resolution is required for UART to operate with baud rate `${BaudRate}` bps." paramId="clock[0]" condition="`${!useUartDiv8 &amp;&amp; pClkDiv8}`" /-->
 
-    <!-- DRC: BaudRate limit -->
-    <!-- minimum baud rate = clkPeriHz / ( uartDiv * OversampleFinal) -->
-    <DRC type="INFO" text="The minimum baud rate achievable is 94488." paramId="BaudRate" condition="`${BaudRate &lt; 94488}`" />
-
     <!-- DRC: BaudRate for IrDA mode -->
     <DRC type="ERROR" text="The baud rate value must be 115200, 57600, 38400, 19200, 9600, 2400 or 1200 bps when the IrDA mode is selected." paramId="BaudRate" condition="`${(IrDA) ? !((BaudRate eq 1200) || (BaudRate eq 2400) || (BaudRate eq 9600) || (BaudRate eq 19200) || (BaudRate eq 38400) || (BaudRate eq 57600) || (BaudRate eq 115200)) : false}`" />
 
@@ -323,7 +319,7 @@
       <Member name="enableInputFilter" value="`${((IrDA) ? &quot;true&quot; : EnableInputFilter) ? &quot;true&quot; : &quot;false&quot;}`" />
       <Member name="breakWidth" value="`${BreakSignalBits}`UL" />
       <Member name="dropOnFrameError" value="`${DropOnFrameErr}`" />
-      <Member name="dropOnParityError" value="`${((ParityType ne CY_SCB_UART_PARITY_NONE) &amp;&amp; DropOnParityErr) ? &quot;true&quot; : &quot;false&quot;}`" />
+      <Member name="dropOnParityError" value="`${(((Standard) &amp;&amp; (ParityType eq CY_SCB_UART_PARITY_NONE)) || (IrDA)) ? &quot;false&quot; : DropOnParityErr}`"/>
       <Member name="breaklevel" value="`${BreakLevel ? &quot;true&quot; : &quot;false&quot;}`" include="`${(version &gt; 1) || (ipName eq &quot;mxs22scb&quot;)}`"  />
 
       <Member name="receiverAddress"     value="`${MultiProc ? MpRxAddress : &quot;0x0UL&quot;}`" />

@@ -16,7 +16,7 @@ var group__wicedbt__isoc__functions =
     [ "wiced_bt_isoc_is_bis_created", "group__wicedbt__isoc__functions.html#gaa37e3a5c2c94ac93274609bc7c96360a", null ],
     [ "wiced_bt_isoc_is_cis_connected", "group__wicedbt__isoc__functions.html#ga2a85b997fdeeb5e6f72667d91cafc123", null ],
     [ "wiced_bt_isoc_is_cis_connected_by_conn_id", "group__wicedbt__isoc__functions.html#gad7eceef633c5f48c84f7a9476a55c098", null ],
-    [ "wiced_bt_isoc_is_data_path_active", "group__wicedbt__isoc__functions.html#ga802cac436a3d27129d300b6a4523471b", null ],
+    [ "wiced_bt_isoc_is_data_path_active", "group__wicedbt__isoc__functions.html#gaac4bca24f598b33449a1cf1e6dae0bd9", null ],
     [ "wiced_bt_isoc_peripheral_accept_cis", "group__wicedbt__isoc__functions.html#gac3652d890d5e5d2949d37cfecd933fa1", null ],
     [ "wiced_bt_isoc_peripheral_big_create_sync", "group__wicedbt__isoc__functions.html#ga17d9f91f761dfce8b63defce4aa4ab89", null ],
     [ "wiced_bt_isoc_peripheral_big_terminate_sync", "group__wicedbt__isoc__functions.html#ga59927c1b0feaf595911edfe541b437e5", null ],
@@ -25,7 +25,7 @@ var group__wicedbt__isoc__functions =
     [ "wiced_bt_isoc_register_cb", "group__wicedbt__isoc__functions.html#ga99dd90fb66ea3f53ac5857f4c3cd5dba", null ],
     [ "wiced_bt_isoc_register_data_cb", "group__wicedbt__isoc__functions.html#gaaa0cb5f3fce5ce155a10410dec2d8155", null ],
     [ "wiced_bt_isoc_remove_data_path", "group__wicedbt__isoc__functions.html#gae4e0973dc5a2ba0c6710643c23604d19", null ],
-    [ "wiced_bt_isoc_setup_data_path", "group__wicedbt__isoc__functions.html#ga3058baf86082b466aec93193740ee37d", null ],
+    [ "wiced_bt_isoc_setup_data_path", "group__wicedbt__isoc__functions.html#gab9c4462958382d109f4f74d67c8c4665", null ],
     [ "wiced_bt_isoc_update_cis_conn_handle", "group__wicedbt__isoc__functions.html#gaa5617fa3c60c05740a709659a2a95ac6", null ],
     [ "wiced_bt_write_iso_data_to_lower", "group__wicedbt__isoc__functions.html#gac28933175a38657542914bc40214f843", null ]
 ];

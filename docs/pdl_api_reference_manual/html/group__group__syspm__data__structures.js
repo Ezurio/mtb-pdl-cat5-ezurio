@@ -33,5 +33,6 @@ var group__group__syspm__data__structures =
     [ "BTSS_SYSTEM_SLEEP_PMU_WAKE_SRC_t", "group__group__syspm__data__structures.html#ga39462a6ae39f68f0a4cd968cc767635a", null ],
     [ "CTSS_SYSTEM_SLEEP_PMU_WAKE_SRC_t", "group__group__syspm__data__structures.html#ga5ebcf714de2d93e18eff5aca6508b58e", null ],
     [ "WLSS_SYSTEM_SLEEP_PMU_WAKE_SRC_t", "group__group__syspm__data__structures.html#ga7033ac1a569429a414ff93d73f913400", null ],
-    [ "BTSS_SYSTEM_FLASH_POWER_DOWN_CMD_t", "group__group__syspm__data__structures.html#gab32892682c0ebac57836e378fccf66e2", null ]
+    [ "BTSS_SYSTEM_FLASH_POWER_DOWN_CMD_t", "group__group__syspm__data__structures.html#gab32892682c0ebac57836e378fccf66e2", null ],
+    [ "BTSS_SYSTEM_PSRAM_LPM_CONTROL_t", "group__group__syspm__data__structures.html#ga2e811470e597f4bc50bf2771b2be7c99", null ]
 ];

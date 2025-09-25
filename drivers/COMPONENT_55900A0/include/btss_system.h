@@ -65,8 +65,9 @@ typedef enum {
 
 /** \brief BTSS Sytem Audio pll request types */
 typedef enum {
-    BTSS_SYSTEM_AUDIO_PLL_CLK_REQ_LOCK_TO_SPEED   = 0, /* Recommended to check against supported audio PLL frequences when Bluetooth Audio is used. */
-    BTSS_SYSTEM_AUDIO_PLL_CLK_REQ_UNLOCK_TO_SPEED = 1, /* Recommended to check against supported audio PLL frequences when Bluetooth Audio is used. */
+    BTSS_SYSTEM_AUDIO_PLL_CLK_REQ_LOCK_TO_SPEED     = 0, /* Recommended to check against supported audio PLL frequences when Bluetooth Audio is used. */
+    BTSS_SYSTEM_AUDIO_PLL_CLK_REQ_UNLOCK_TO_SPEED   = 1, /* Recommended to check against supported audio PLL frequences when Bluetooth Audio is used. */
+    BTSS_SYSTEM_AUDIO_PLL_CLK_REQ_PPM_ADJUST        = 2, /* Adjusts audio PLL by requested ppm for audio synchronization use cases */
 } BTSS_SYSTEM_AUDIO_PLL_REQ_t;
 
 /** \brief BTSS Sytem Audio pll request - specific pll frequencies for audio use cases. */
@@ -243,6 +244,7 @@ typedef enum
     BTSS_SYSTEM_NVRAM_OTA_ERR_CRYPTO_INVALID_KEY            = 0x06,
     BTSS_SYSTEM_NVRAM_OTA_ERR_CERT_VALIDATION_FAILED        = 0x07,
     BTSS_SYSTEM_NVRAM_OTA_ERR_NO_ACCESS                     = 0x08,
+    BTSS_SYSTEM_NVRAM_OTA_ERR_INVALID_MDH_SIZE              = 0x09,
 } BTSS_SYSTEM_NVRAM_OTA_ERR_t;
 
 /** Header fields for OTA upgrade feature */
@@ -273,6 +275,14 @@ typedef enum
     BTSS_SYSTEM_FLASH_POWER_DOWN_CMD_ALLOW_APP_CONTROL = 1, /* Allow deep power down command to flash by application */
     BTSS_SYSTEM_FLASH_POWER_DOWN_CMD_ALLOW_BT_CONTROL = 2, /* Allow deep power down command to flash by BT */
 } BTSS_SYSTEM_FLASH_POWER_DOWN_CMD_t;
+
+/** \brief PSRAM Low Power mode control methods */
+typedef enum
+{
+    BTSS_SYSTEM_PSRAM_LOW_POWER_DISALLOW = 0,           /* Disallow Low Power mode request to PSRAM */
+    BTSS_SYSTEM_PSRAM_LOW_POWER_ALLOW_APP_CONTROL = 1,  /* Allow Low Power mode request to PSRAM by Application */
+    BTSS_SYSTEM_PSRAM_LOW_POWER_ALLOW_BTSS_CONTROL = 2, /* Allow Low Power mode request to PSRAM by BTSS */
+} BTSS_SYSTEM_PSRAM_LPM_CONTROL_t;
 
 /** \brief Pre-Sleep Callback from PMU thread */
 typedef BTSS_SYSTEM_PMU_SLEEP_MODE_t(*BTSS_SYSTEM_PRE_SLEEP_CB_t)(BTSS_SYSTEM_PMU_SLEEP_MODE_t sleep_mode, UINT32 sleep_time_in_lpo_cycles);
@@ -637,6 +647,49 @@ void btss_system_overrideBtSleepInhibition(BOOL32 sleepAllowed);
  */
 BOOL32 btss_system_isBtSleepAllowed(void);
 
+/**
+ * Function btss_smif_psram_isLowPowerAllowed
+ *
+ * Returns controlling PSRAM Low Power mode is allowed or not.
+ *
+ * \param[in]    none
+ *
+ * \return       BTSS_SYSTEM_PSRAM_LPM_CONTROL_t
+ */
+BTSS_SYSTEM_PSRAM_LPM_CONTROL_t btss_smif_psram_isLowPowerAllowed(void);
+
+/**
+ * Function btss_smif_psram_allowLowPowerMode
+ *
+ * enable/disable the Low Power mode as per request, returns controlling PSRAM Low Power mode is allowed or not.
+ *
+ * \param[in]    BTSS_SYSTEM_PSRAM_LPM_CONTROL_t
+ *
+ * \return       BTSS_SYSTEM_PSRAM_LPM_CONTROL_t
+ */
+BTSS_SYSTEM_PSRAM_LPM_CONTROL_t btss_smif_psram_allowLowPowerMode(BTSS_SYSTEM_PSRAM_LPM_CONTROL_t allowed);
+
+/**
+ * Function btss_smif_psram_enterLowPowerMode
+ *
+ * Returns TRUE if the operation of entering Low Power mode to PSRAM is acknowledged.
+ *
+ * \param[in]    none
+ *
+ * \return       TRUE/FALSE  : BOOL32
+ */
+BOOL32 btss_smif_psram_enterLowPowerMode(void);
+
+/**
+ * Function btss_smif_psram_exitLowPowerMode
+ *
+ * Returns TRUE if the operation of exiting Low Power mode to PSRAM is acknowledged.
+ *
+ * \param[in]    none
+ *
+ * \return       TRUE/FALSE  : BOOL32
+ */
+BOOL32 btss_smif_psram_exitLowPowerMode(void);
 /** \} group_syspm_function */
 
 #include "bt_types.h"

@@ -10,8 +10,6 @@
 #ifndef __WICED_BT_ADV_SCAN_EXTENDED_H__
 #define __WICED_BT_ADV_SCAN_EXTENDED_H__
 
-#include "wiced_bt_isoc.h"
-
 #ifndef WICED_BLE_ENABLE_EXTENDED_ADV_API
 #define WICED_BLE_ENABLE_EXTENDED_ADV_API 1
 #endif
@@ -202,14 +200,11 @@ typedef uint8_t wiced_ble_ext_conn_initiator_filter_policy_t;
 /** Scanning filter policy enums used in set extended scan parameters command */
 enum wiced_ble_ext_scanning_filter_policy_e
 {
-    WICED_BLE_EXT_SCAN_BASIC_UNFILTERED_SP = 0,    /**< Basic unfiltered scanning policy */
-    WICED_BLE_EXT_SCAN_BASIC_FILTERED_SP = 1,      /**< Basic filtered scanning policy  */
-    WICED_BLE_EXT_SCAN_EXTENDED_UNFILTERED_SP = 2, /**< Extended unfiltered scanning policy */
-    WICED_BLE_EXT_SCAN_EXTENDED_FILTERED_SP = 3,   /**< Extended filtered scanning policy  */
+    WICED_BLE_EXT_SCAN_BASIC_UNFILTERED_SP = WICED_BLE_SCAN_BASIC_UNFILTERED_SP,    /**< Basic unfiltered scanning policy */
+    WICED_BLE_EXT_SCAN_BASIC_FILTERED_SP = WICED_BLE_SCAN_BASIC_FILTERED_SP,      /**< Basic filtered scanning policy  */
+    WICED_BLE_EXT_SCAN_EXTENDED_UNFILTERED_SP = WICED_BLE_SCAN_EXTENDED_UNFILTERED_SP, /**< Extended unfiltered scanning policy */
+    WICED_BLE_EXT_SCAN_EXTENDED_FILTERED_SP = WICED_BLE_SCAN_EXTENDED_FILTERED_SP,   /**< Extended filtered scanning policy  */
 };
-/** Scanning filter policy used. (see #wiced_ble_ext_scanning_filter_policy_e) */
-typedef uint8_t wiced_ble_ext_scanning_filter_policy_t;
-
 
 /** Phy adv options to be set in #wiced_ble_ext_adv_set_params */
 enum wiced_ble_ext_adv_phy_options_e
@@ -244,7 +239,7 @@ typedef struct
     wiced_bt_ble_advert_chnl_map_t primary_adv_channel_map;
 
     /** Ignored in case of anonymous adv.See \p event_properties */
-    wiced_bt_ble_address_type_t own_addr_type;
+    wiced_ble_own_address_options_t own_addr_type;
 
     /** Peer device address type */
     wiced_bt_ble_address_type_t peer_addr_type;
@@ -309,7 +304,7 @@ typedef struct
     /** Initiator filter policy */
     wiced_ble_ext_conn_initiator_filter_policy_t init_filter_policy;
     /** initiator address type */
-    wiced_bt_ble_address_type_t own_addr_type;
+    wiced_ble_own_address_options_t own_addr_type;
     /** peer address type */
     wiced_bt_ble_address_type_t peer_addr_type;
     /** peer address */
@@ -368,9 +363,9 @@ typedef struct
     uint16_t max_pdu;                /**< Value of the Max_PDU subfield of the BIGInfo field in the Advertising PDU */
     uint32_t sdu_interval;           /**< Value of the SDU_Interval subfield of the BIGInfo field */
     uint16_t max_sdu;                /**< Value of the Max_SDU subfield of the BIGInfo field in the Advertising PDU */
-    wiced_bt_isoc_phy_t phy;         /**< The transmitter PHY of packets */
-    wiced_bt_isoc_framing_t framing; /**< Framing parameter */
-    wiced_bt_isoc_encryption_t encryption; /**< BIG carries encrypted or unencrypted data */
+    wiced_ble_isoc_phy_t phy;         /**< The transmitter PHY of packets */
+    wiced_ble_isoc_framing_t framing; /**< Framing parameter */
+    wiced_ble_isoc_encryption_t encryption; /**< BIG carries encrypted or unencrypted data */
 } wiced_ble_biginfo_adv_report_t;
 
 
@@ -386,9 +381,9 @@ typedef struct
 typedef struct
 {
     /** Own LE Address type */
-    wiced_bt_ble_address_type_t own_addr_type;
+    wiced_ble_own_address_options_t own_addr_type;
     /** scan filter policy */
-    wiced_ble_ext_scanning_filter_policy_t scan_filter_policy;
+    wiced_ble_scanning_filter_policy_t scan_filter_policy;
     /** Indicates PHY(s) to receive the primary advertising channel.*/
     wiced_ble_ext_adv_phy_mask_t scanning_phys;
 
@@ -720,6 +715,18 @@ extern "C"
  *
  */
     wiced_bt_dev_status_t wiced_ble_ext_create_connection(wiced_ble_ext_conn_cfg_t *p_ext_conn_cfg);
+
+   /**
+* Cancel a LE connection
+*
+* @return          wiced_bt_dev_status_t
+*
+* <b> WICED_BT_UNSUPPORTED </b>   : If command not supported \n
+* <b> WICED_BT_NO_RESOURCES </b>  : If no memory to issue the command \n
+* <b> WICED_BT_SUCCESS </b>       : If successful\n
+*
+*/
+   wiced_bt_dev_status_t wiced_ble_cancel_connection (void);
 
     /**
  * Callback wiced_ble_ext_adv_event_cback_t

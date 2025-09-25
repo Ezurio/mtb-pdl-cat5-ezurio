@@ -604,6 +604,18 @@ wiced_bt_dev_status_t wiced_bt_ble_set_data_packet_length(wiced_bt_device_addres
  */
 wiced_bool_t wiced_bt_smp_create_local_sc_oob_data(wiced_bt_device_address_t bd_addr,
                                                    wiced_bt_ble_address_type_t bd_addr_type);
+/**
+ *
+ * Update LE secury keys when AFM connected.
+ *
+ * @param[in]       bd_addr         : remote device address for the OOB data
+ * @param[in]       link_key    : new link keys
+ *
+ * @return          WICED_SUCCESS: Update successful.
+ *
+ */
+wiced_result_t wiced_bt_ble_update_security_key(wiced_bt_device_address_t bd_addr,wiced_bt_device_sec_keys_t *link_key);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif

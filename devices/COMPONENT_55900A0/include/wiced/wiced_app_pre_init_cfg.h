@@ -196,9 +196,10 @@ typedef STRUCT_PACKED
     void                                *p_br_audio_cfg;
 
     /* LPO source selection and max frequency enablement */
-    uint8_t                               lpo_src_sel_654_max_freq_0;
-    //[0] - enable_max_freq, [3-1] - reserved, [6-4] - lpo_src_sel, [7] - reserved
+    uint8_t                              clock_config_sel_max_freq;
+    //[0] - enable_max_freq, [1] - reserved, [3-2] - hfo_option_sel, [6-4] - lpo_src_sel, [7] - reserved
     //lpo_src_sel 1:-iLPO1, 2:-iLPO2, 3:-LHL_XTAL_IN, 4:-eLPO_IN
+    //hfo_option_sel 0:Invalid, 1:XTAL, 2:TCXO, 3: Reserved
 }wiced_pre_init_cfg_t;
 
 void wiced_register_pre_init_cfg (const wiced_pre_init_cfg_t *p_cfg);

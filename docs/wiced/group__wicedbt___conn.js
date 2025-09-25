@@ -79,6 +79,7 @@ var group__wicedbt___conn =
     [ "wiced_bt_ble_set_data_packet_length", "group__wicedbt___conn.html#gaa08c87a6bb5303c94ad71460496b5420", null ],
     [ "wiced_bt_ble_set_host_features", "group__wicedbt___conn.html#gae3bb5b03e161b641202178ffe672705c", null ],
     [ "wiced_bt_ble_set_privacy_mode", "group__btm__ble__sec__api__functions.html#ga2780ef822665cbfd72ba2b2eeefbc35e", null ],
+    [ "wiced_bt_ble_update_security_key", "group__wicedbt___conn.html#gad1fee3b31e69343a41972fe2a8ca8569", null ],
     [ "wiced_bt_ble_verify_signature", "group__btm__ble__sec__api__functions.html#ga771629322c842c541611d928ad128a40", null ],
     [ "wiced_bt_smp_create_local_sc_oob_data", "group__wicedbt___conn.html#gafce580b6606202828f9dfb1893cc30f4", null ]
 ];

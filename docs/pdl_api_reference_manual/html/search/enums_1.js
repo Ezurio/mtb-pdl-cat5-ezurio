@@ -64,5 +64,6 @@ var searchData=
   ['cy_5fen_5ftdm_5fsource_5fstatus_5ft',['cy_en_tdm_source_status_t',['../group__group__tdm__enums.html#ga1db60f70842aa4d4a9c6593e33074628',1,'cy_tdm.h']]],
   ['cy_5fen_5ftdm_5fstatus_5ft',['cy_en_tdm_status_t',['../group__group__tdm__enums.html#ga4d3b2e281577620b2eaf8fa3a75b05fe',1,'cy_tdm.h']]],
   ['cy_5fen_5ftdm_5fword_5fextend_5fcfg_5ft',['cy_en_tdm_word_extend_cfg_t',['../group__group__tdm__enums.html#gab0793a864efd973075babaea02b09fe2',1,'cy_tdm.h']]],
-  ['cy_5fen_5ftdm_5fws_5ft',['cy_en_tdm_ws_t',['../group__group__tdm__enums.html#ga3e7c9522bd7a7e179487ac26fcec0129',1,'cy_tdm.h']]]
+  ['cy_5fen_5ftdm_5fws_5ft',['cy_en_tdm_ws_t',['../group__group__tdm__enums.html#ga3e7c9522bd7a7e179487ac26fcec0129',1,'cy_tdm.h']]],
+  ['cy_5fsmif_5fdev_5flowpower_5fctrl_5ft',['cy_smif_dev_lowpower_ctrl_t',['../group__group__smif__enums.html#gafc296e1e7361b4d2bec7de974a2c78cf',1,'cy_smif.h']]]
 ];

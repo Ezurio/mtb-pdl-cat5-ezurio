@@ -28,8 +28,8 @@ var group__wicedbt__isoc__defs =
       [ "max_pdu_c_to_p", "structwiced__bt__isoc__cis__established__data__t.html#a108a506d0472685c2ceaca18f5a3b162", null ],
       [ "max_pdu_p_to_c", "structwiced__bt__isoc__cis__established__data__t.html#ab4b22b198280446597f2d186ccc905ff", null ],
       [ "nse", "structwiced__bt__isoc__cis__established__data__t.html#ad75411cb46f846c9519a60db467c464c", null ],
-      [ "phy_c_to_p", "structwiced__bt__isoc__cis__established__data__t.html#ad4431eaeb09e4bf132e79a397834f51c", null ],
-      [ "phy_p_to_c", "structwiced__bt__isoc__cis__established__data__t.html#ab9d317b0b62c6a00b2ff22537204d8a0", null ],
+      [ "phy_c_to_p", "structwiced__bt__isoc__cis__established__data__t.html#a39ec4f224f80e64ae5886e73531b2b90", null ],
+      [ "phy_p_to_c", "structwiced__bt__isoc__cis__established__data__t.html#a35f1aa86ac71c425e7639d3bba3056af", null ],
       [ "status", "structwiced__bt__isoc__cis__established__data__t.html#ade818037fd6c985038ff29656089758d", null ]
     ] ],
     [ "wiced_bt_isoc_cig_status_data_t", "structwiced__bt__isoc__cig__status__data__t.html", [
@@ -47,7 +47,7 @@ var group__wicedbt__isoc__defs =
     ] ],
     [ "wiced_bt_isoc_data_path_status_t", "structwiced__bt__isoc__data__path__status__t.html", [
       [ "conn_hdl", "structwiced__bt__isoc__data__path__status__t.html#af518c3a4cd4defa91bde8ad80935a43d", null ],
-      [ "data_path_dir", "structwiced__bt__isoc__data__path__status__t.html#a6bae2b84f13e56f1785b3fd491283960", null ],
+      [ "data_path_dir", "structwiced__bt__isoc__data__path__status__t.html#a83f1e09a27afbbcff6b20d7654e70593", null ],
       [ "status", "structwiced__bt__isoc__data__path__status__t.html#ade818037fd6c985038ff29656089758d", null ]
     ] ],
     [ "wiced_bt_isoc_terminated_data_t", "structwiced__bt__isoc__terminated__data__t.html", [
@@ -68,7 +68,7 @@ var group__wicedbt__isoc__defs =
       [ "trans_latency", "structwiced__bt__isoc__big__sync__established__t.html#a8dad8016a726a1baf6f92ade6c3eb197", null ]
     ] ],
     [ "wiced_bt_isoc_create_big_complete_t", "structwiced__bt__isoc__create__big__complete__t.html", [
-      [ "phy", "structwiced__bt__isoc__create__big__complete__t.html#a266d02eac9935e2e0d5175fe05ef8942", null ],
+      [ "phy", "structwiced__bt__isoc__create__big__complete__t.html#a442d4d53ba7febc7f462c696870b5965", null ],
       [ "sync_data", "structwiced__bt__isoc__create__big__complete__t.html#ace85d2c200e540a8238039603e431227", null ],
       [ "sync_delay", "structwiced__bt__isoc__create__big__complete__t.html#a6786db252d37475cce662c1cd987bb22", null ]
     ] ],
@@ -88,19 +88,19 @@ var group__wicedbt__isoc__defs =
       [ "cis_id", "structwiced__bt__ble__cis__config__t.html#aca8c808fa70436fd5f71948408e92879", null ],
       [ "max_sdu_c_to_p", "structwiced__bt__ble__cis__config__t.html#a3b980b288d37a06c108c5dfc209e8c95", null ],
       [ "max_sdu_p_to_c", "structwiced__bt__ble__cis__config__t.html#ab4dd356c3950a44e6a761aae52cf6965", null ],
-      [ "phy_c_to_p", "structwiced__bt__ble__cis__config__t.html#ad4431eaeb09e4bf132e79a397834f51c", null ],
-      [ "phy_p_to_c", "structwiced__bt__ble__cis__config__t.html#ab9d317b0b62c6a00b2ff22537204d8a0", null ],
+      [ "phy_c_to_p", "structwiced__bt__ble__cis__config__t.html#a39ec4f224f80e64ae5886e73531b2b90", null ],
+      [ "phy_p_to_c", "structwiced__bt__ble__cis__config__t.html#a35f1aa86ac71c425e7639d3bba3056af", null ],
       [ "rtn_c_to_p", "structwiced__bt__ble__cis__config__t.html#a1be52a11f81ec7547c822a2d70cb9be0", null ],
       [ "rtn_p_to_c", "structwiced__bt__ble__cis__config__t.html#a033fb728e8a599411db1f1901749487a", null ]
     ] ],
     [ "wiced_bt_ble_cig_param_t", "structwiced__bt__ble__cig__param__t.html", [
       [ "cig_id", "structwiced__bt__ble__cig__param__t.html#af4b7938921a3f465f1440783c956592c", null ],
       [ "cis_count", "structwiced__bt__ble__cig__param__t.html#a00a436a6a9a19bee679880fd7c5dbbd0", null ],
-      [ "framing", "structwiced__bt__ble__cig__param__t.html#a28c8b1cd1796e1f4df6722452edbe013", null ],
+      [ "framing", "structwiced__bt__ble__cig__param__t.html#ab75ebbb762590b9a775696c6e33c02fa", null ],
       [ "max_trans_latency_c_to_p", "structwiced__bt__ble__cig__param__t.html#a6c58a9952b673a78c52ec79043e6d509", null ],
       [ "max_trans_latency_p_to_c", "structwiced__bt__ble__cig__param__t.html#a4f00a22846558dbea7770c9b225ef3bb", null ],
       [ "p_cis_config_list", "structwiced__bt__ble__cig__param__t.html#a668b32b34878d5b193fba5ffbd82b830", null ],
-      [ "packing", "structwiced__bt__ble__cig__param__t.html#a0a8c198d1529916fdf48f5395d5904ca", null ],
+      [ "packing", "structwiced__bt__ble__cig__param__t.html#a23408f60860efa5fe967ab3519c1fc13", null ],
       [ "peripheral_clock_accuracy", "structwiced__bt__ble__cig__param__t.html#a4198b61ab55bffd76a57b8675dde66ef", null ],
       [ "sdu_interval_c_to_p", "structwiced__bt__ble__cig__param__t.html#ab78cb46671f4baf20cb434ef4b353e40", null ],
       [ "sdu_interval_p_to_c", "structwiced__bt__ble__cig__param__t.html#aa8b4943ae62137064c3c915618317dd1", null ]
@@ -114,18 +114,18 @@ var group__wicedbt__isoc__defs =
       [ "max_sdu_c_to_p", "structwiced__bt__ble__cis__config__test__t.html#a3b980b288d37a06c108c5dfc209e8c95", null ],
       [ "max_sdu_p_to_c", "structwiced__bt__ble__cis__config__test__t.html#ab4dd356c3950a44e6a761aae52cf6965", null ],
       [ "nse", "structwiced__bt__ble__cis__config__test__t.html#ad75411cb46f846c9519a60db467c464c", null ],
-      [ "phy_c_to_p", "structwiced__bt__ble__cis__config__test__t.html#ad4431eaeb09e4bf132e79a397834f51c", null ],
-      [ "phy_p_to_c", "structwiced__bt__ble__cis__config__test__t.html#ab9d317b0b62c6a00b2ff22537204d8a0", null ]
+      [ "phy_c_to_p", "structwiced__bt__ble__cis__config__test__t.html#a39ec4f224f80e64ae5886e73531b2b90", null ],
+      [ "phy_p_to_c", "structwiced__bt__ble__cis__config__test__t.html#a35f1aa86ac71c425e7639d3bba3056af", null ]
     ] ],
     [ "wiced_bt_ble_cig_param_test_t", "structwiced__bt__ble__cig__param__test__t.html", [
       [ "cig_id", "structwiced__bt__ble__cig__param__test__t.html#af4b7938921a3f465f1440783c956592c", null ],
       [ "cis_count", "structwiced__bt__ble__cig__param__test__t.html#a00a436a6a9a19bee679880fd7c5dbbd0", null ],
-      [ "framing", "structwiced__bt__ble__cig__param__test__t.html#a28c8b1cd1796e1f4df6722452edbe013", null ],
+      [ "framing", "structwiced__bt__ble__cig__param__test__t.html#ab75ebbb762590b9a775696c6e33c02fa", null ],
       [ "ft_c_to_p", "structwiced__bt__ble__cig__param__test__t.html#a8ad52deccd61f6a61cc1c482cd2c5575", null ],
       [ "ft_p_to_c", "structwiced__bt__ble__cig__param__test__t.html#a1d9240fe114e43fbba1d16491089e635", null ],
       [ "iso_interval", "structwiced__bt__ble__cig__param__test__t.html#a49e7eb174320231deae5ec255b46e5d7", null ],
       [ "p_cis_config_list", "structwiced__bt__ble__cig__param__test__t.html#a43e0c8bb62dda0d1d872848d8226b6ac", null ],
-      [ "packing", "structwiced__bt__ble__cig__param__test__t.html#a0a8c198d1529916fdf48f5395d5904ca", null ],
+      [ "packing", "structwiced__bt__ble__cig__param__test__t.html#a23408f60860efa5fe967ab3519c1fc13", null ],
       [ "peripheral_clock_accuracy", "structwiced__bt__ble__cig__param__test__t.html#a4198b61ab55bffd76a57b8675dde66ef", null ],
       [ "sdu_interval_c_to_p", "structwiced__bt__ble__cig__param__test__t.html#ab78cb46671f4baf20cb434ef4b353e40", null ],
       [ "sdu_interval_p_to_c", "structwiced__bt__ble__cig__param__test__t.html#aa8b4943ae62137064c3c915618317dd1", null ]
@@ -161,15 +161,11 @@ var group__wicedbt__isoc__defs =
     ] ],
     [ "WICED_BLE_ISOC_MAX_TRANSPORT_LATENCY", "group__wicedbt__isoc__defs.html#ga5ae581a4bc8e6b82cad548d2e271a302", null ],
     [ "WICED_BLE_ISOC_MIN_TRANSPORT_LATENCY", "group__wicedbt__isoc__defs.html#ga35e5c343a41516e1139c6e4d9a225290", null ],
+    [ "wiced_ble_isoc_packing_t", "group__wicedbt__isoc__defs.html#ga606ebec81adc7c1c8b237aabb8532761", null ],
     [ "wiced_bt_iso_num_complete_cb_t", "group__wicedbt__isoc__defs.html#ga82af9e17489cd1d3fbda7e98d88c1ed6", null ],
     [ "wiced_bt_iso_rx_cb_t", "group__wicedbt__isoc__defs.html#gabbc0e8b550d441b5c78a8bfdfc5df8be", null ],
     [ "wiced_bt_isoc_cback_t", "group__wicedbt__isoc__defs.html#ga6b2a3036565ebb5063c9777a67782be3", null ],
-    [ "wiced_bt_isoc_encryption_t", "group__wicedbt__isoc__defs.html#ga7496805598313cf63d1b9fbb7d883f5c", null ],
     [ "wiced_bt_isoc_event_t", "group__wicedbt__isoc__defs.html#gaeb63faf3015e10205f3e99868b316b90", null ],
-    [ "wiced_bt_isoc_framing_t", "group__wicedbt__isoc__defs.html#ga9cd6edc8d9b06246d378424303939f0c", null ],
-    [ "wiced_bt_isoc_packing_t", "group__wicedbt__isoc__defs.html#ga0d653b51e7498019713f4e8448c24b71", null ],
-    [ "wiced_bt_isoc_phy_t", "group__wicedbt__isoc__defs.html#ga0d5363a4a29d6cba5a3f950ca99eb66e", null ],
-    [ "wiced_bt_isoc_encryption_e", "group__wicedbt__isoc__defs.html#gaa172ea987ac06ed83635447ad46e2895", null ],
     [ "wiced_bt_isoc_event_e", "group__wicedbt__isoc__defs.html#ga1cd62aa92d4afd6ba137938c012e14af", [
       [ "WICED_BLE_ISOC_SET_CIG_CMD_COMPLETE", "group__wicedbt__isoc__defs.html#gga1cd62aa92d4afd6ba137938c012e14afae1c561ccf341943a9cd7a4c42acc36bc", null ],
       [ "WICED_BLE_ISOC_CIS_REQUEST", "group__wicedbt__isoc__defs.html#gga1cd62aa92d4afd6ba137938c012e14afaa5959f695041d0d148d42f6deffbe783", null ],
@@ -183,7 +179,5 @@ var group__wicedbt__isoc__defs =
       [ "WICED_BLE_ISOC_BIG_TERMINATED", "group__wicedbt__isoc__defs.html#gga1cd62aa92d4afd6ba137938c012e14afab4048230937db7dcf64e245cfcb1f6dd", null ],
       [ "WICED_BLE_ISOC_BIG_SYNC_LOST", "group__wicedbt__isoc__defs.html#gga1cd62aa92d4afd6ba137938c012e14afa60c8eb292125693080b2313550fb21a0", null ]
     ] ],
-    [ "wiced_bt_isoc_framing_e", "group__wicedbt__isoc__defs.html#gad68160516eaf19733310a3e533075c5f", null ],
-    [ "wiced_bt_isoc_packing_e", "group__wicedbt__isoc__defs.html#ga94363586b446de4fb9bf619a0cdb6da4", null ],
-    [ "wiced_bt_isoc_phy_e", "group__wicedbt__isoc__defs.html#ga5f976fcebc4b50d311af3a0ceb7989d7", null ]
+    [ "wiced_bt_isoc_packing_e", "group__wicedbt__isoc__defs.html#ga94363586b446de4fb9bf619a0cdb6da4", null ]
 ];

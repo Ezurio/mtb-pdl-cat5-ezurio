@@ -269,6 +269,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gafce580b6606202828f9dfb1893cc30f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___conn.html#gafce580b6606202828f9dfb1893cc30f4">wiced_bt_smp_create_local_sc_oob_data</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> bd_addr, <a class="el" href="group__bt__types.html#ga97897f7408c23723933e9d21815c7294">wiced_bt_ble_address_type_t</a> bd_addr_type)</td></tr>
 <tr class="memdesc:gafce580b6606202828f9dfb1893cc30f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create local LE SC (secure connection) OOB data.  <a href="#gafce580b6606202828f9dfb1893cc30f4">More...</a><br /></td></tr>
 <tr class="separator:gafce580b6606202828f9dfb1893cc30f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1fee3b31e69343a41972fe2a8ca8569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___result.html#gacfc32ead8a827d53416f01b19eb58310">wiced_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__wicedbt___conn.html#gad1fee3b31e69343a41972fe2a8ca8569">wiced_bt_ble_update_security_key</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> bd_addr, <a class="el" href="group__wicedbt___device_management.html#ga68f2d12b65966d08594885772606dc15">wiced_bt_device_sec_keys_t</a> *link_key)</td></tr>
+<tr class="memdesc:gad1fee3b31e69343a41972fe2a8ca8569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update LE secury keys when AFM connected.  <a href="#gad1fee3b31e69343a41972fe2a8ca8569">More...</a><br /></td></tr>
+<tr class="separator:gad1fee3b31e69343a41972fe2a8ca8569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1745ec7401f09c80ec5aecbacc9c0002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__btm__ble__sec__api__functions.html#ga1745ec7401f09c80ec5aecbacc9c0002">wiced_bt_ble_data_signature</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> bd_addr, uint8_t *p_text, uint16_t <a class="el" href="group__wicedbt__gatt.html#ga5723e60ffd628510c699eddbce90be23">len</a>, <a class="el" href="group__wicedbt___conn.html#ga39b3b50eac531691f2bc87291526bb73">wiced_dev_ble_signature_t</a> signature)</td></tr>
 <tr class="memdesc:ga1745ec7401f09c80ec5aecbacc9c0002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign the data using AES128 CMAC algorith.  <a href="#ga1745ec7401f09c80ec5aecbacc9c0002">More...</a><br /></td></tr>
 <tr class="separator:ga1745ec7401f09c80ec5aecbacc9c0002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1006,6 +1009,42 @@ Functions</h2></td></tr>
 <b> WICED_BT_ILLEGAL_ACTION </b> : if device not added to resolving list or peer irk is not valid <br />
 <b> WICED_BT_ERROR </b> : error while processing the command <br />
 <b> WICED_BT_SUCCESS</b> : if command started </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad1fee3b31e69343a41972fe2a8ca8569"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___result.html#gacfc32ead8a827d53416f01b19eb58310">wiced_result_t</a> wiced_bt_ble_update_security_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a>&#160;</td>
+          <td class="paramname"><em>bd_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__wicedbt___device_management.html#ga68f2d12b65966d08594885772606dc15">wiced_bt_device_sec_keys_t</a> *&#160;</td>
+          <td class="paramname"><em>link_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update LE secury keys when AFM connected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bd_addr</td><td>: remote device address for the OOB data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">link_key</td><td>: new link keys</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>WICED_SUCCESS: Update successful. </dd></dl>
 
 </div>
 </div>

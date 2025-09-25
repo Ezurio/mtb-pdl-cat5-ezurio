@@ -13,5 +13,5 @@ var group__l2cap__le__api__functions =
     [ "wiced_bt_l2cap_le_get_peer_mtu", "group__l2cap__le__api__functions.html#ga97495805945b9075eec788d99a1ce8c4", null ],
     [ "wiced_bt_l2cap_le_register", "group__l2cap__le__api__functions.html#ga44312ab4c397243d0b40b55851d34a62", null ],
     [ "wiced_bt_l2cap_le_set_user_congestion", "group__l2cap__le__api__functions.html#gab5f6c77c918db23fd0ac5cad6125c2f2", null ],
-    [ "wiced_bt_l2cap_update_ble_conn_params", "group__l2cap__le__api__functions.html#gacfa5536d207a4b9bb796e31ad37b09b6", null ]
+    [ "wiced_bt_l2cap_update_ble_conn_params", "group__l2cap__le__api__functions.html#ga649c28635db51a1a7fcc7a054e79b2d3", null ]
 ];

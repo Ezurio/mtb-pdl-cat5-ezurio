@@ -428,6 +428,16 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gad786eeb67bcea60b35ae8ecd48ffaf82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the remap size.  <a href="group__group__smif__enums.html#gad786eeb67bcea60b35ae8ecd48ffaf82">More...</a><br /></td></tr>
 <tr class="separator:gad786eeb67bcea60b35ae8ecd48ffaf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc296e1e7361b4d2bec7de974a2c78cf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__smif__enums.html#gafc296e1e7361b4d2bec7de974a2c78cf">cy_smif_dev_lowpower_ctrl_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__smif__enums.html#ggafc296e1e7361b4d2bec7de974a2c78cfa23f418305cc504eaec0adf48d2e629e4">CY_SMIF_DEV_LPM_CTRL_DISALLOW</a> = 0,
+<br />
+&#160;&#160;<a class="el" href="group__group__smif__enums.html#ggafc296e1e7361b4d2bec7de974a2c78cfa551a49af0c95facddb0a428546c27867">CY_SMIF_DEV_LPM_CTRL_BY_APP</a> = 1,
+<br />
+&#160;&#160;<a class="el" href="group__group__smif__enums.html#ggafc296e1e7361b4d2bec7de974a2c78cfa62c4f7f02f8ff63ca5beb95318ad50c0">CY_SMIF_DEV_LPM_CTRL_BY_BTSS</a> = 2
+<br />
+ }</td></tr>
+<tr class="memdesc:gafc296e1e7361b4d2bec7de974a2c78cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the owner who controls SMIF device Low Power mode.  <a href="group__group__smif__enums.html#gafc296e1e7361b4d2bec7de974a2c78cf">More...</a><br /></td></tr>
+<tr class="separator:gafc296e1e7361b4d2bec7de974a2c78cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="gab71e4b1f4c80b3e8c82dd85570415e44"></a>
@@ -1011,6 +1021,31 @@ Enumerations</h2></td></tr>
 
 <p>Specifies the remap size. </p>
 <dl class="section note"><dt>Note</dt><dd>This enum is available for CAT1D devices. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gafc296e1e7361b4d2bec7de974a2c78cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__smif__enums.html#gafc296e1e7361b4d2bec7de974a2c78cf">cy_smif_dev_lowpower_ctrl_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specifies the owner who controls SMIF device Low Power mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggafc296e1e7361b4d2bec7de974a2c78cfa23f418305cc504eaec0adf48d2e629e4"></a>CY_SMIF_DEV_LPM_CTRL_DISALLOW&#160;</td><td class="fielddoc">
+<p>Disallow sleep operation to SMIF device. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggafc296e1e7361b4d2bec7de974a2c78cfa551a49af0c95facddb0a428546c27867"></a>CY_SMIF_DEV_LPM_CTRL_BY_APP&#160;</td><td class="fielddoc">
+<p>Allow sleep operation to SMIF device by Application. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggafc296e1e7361b4d2bec7de974a2c78cfa62c4f7f02f8ff63ca5beb95318ad50c0"></a>CY_SMIF_DEV_LPM_CTRL_BY_BTSS&#160;</td><td class="fielddoc">
+<p>Allow sleep operaiton to SMIF device by BTSS. </p>
+</td></tr>
+</table>
 
 </div>
 </div>

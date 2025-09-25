@@ -1144,6 +1144,18 @@ typedef struct
 
 /** \endcond */
 
+/** Specifies the owner who controls SMIF device Low Power mode */
+typedef enum
+{
+    /* Depends on SMIF devices, generally it means
+       Flash: Deep Power Down mode
+       PSRAM: Half Sleep mode
+     */
+    CY_SMIF_DEV_LPM_CTRL_DISALLOW = 0, /**< Disallow sleep operation to SMIF device */
+    CY_SMIF_DEV_LPM_CTRL_BY_APP   = 1, /**< Allow sleep operation to SMIF device by Application */
+    CY_SMIF_DEV_LPM_CTRL_BY_BTSS  = 2, /**< Allow sleep operaiton to SMIF device by BTSS */
+} cy_smif_dev_lowpower_ctrl_t;
+
 /** \} group_smif_enums */
 
 
@@ -1541,7 +1553,7 @@ cy_en_smif_status_t Cy_SMIF_UnsecureTimeoutRun(uint32_t *timeoutUnits);
 /** \} group_smif_low_level_functions */
 
 
-#else // SMIF_BTFW_CHANGES
+#else // Not (CY_IP_MXSMIF_VERSION>=2) && Not defined (CY_DOXYGEN)
 __STATIC_INLINE void Cy_SMIF_Disable(SMIF_Type *base);
 __STATIC_INLINE void  Cy_SMIF_SetInterruptMask(SMIF_Type *base, uint32_t interrupt);
 __STATIC_INLINE uint32_t  Cy_SMIF_GetInterruptMask(SMIF_Type const *base);
@@ -2353,7 +2365,7 @@ __STATIC_INLINE SMIF_DEVICE_Type volatile * Cy_SMIF_GetDeviceBySlot(SMIF_Type *b
     return device;
 }
 
-#endif // #ifdef SMIF_BTFW_CHANGES
+#endif // (CY_IP_MXSMIF_VERSION>=2) || defined (CY_DOXYGEN)
 
 /** \endcond */
 /** \} group_smif_low_level_functions */

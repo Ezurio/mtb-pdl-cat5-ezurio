@@ -96,6 +96,27 @@ void Cy_AudioTDM_DisableInterrupt    (TDM_STRUCT_Type *base);
  */
 void Cy_AudioTDM_EnableOutput(TDM_STRUCT_Type *base, CY_TDM_OUTPUT_CONFIG_t config);
 
+/**
+ * Function Cy_AudioTDM_EnableClock
+ *
+ * Enable system clock for TDM IP. Required for register read/write access.
+ *
+ * \param[in]    base          : MXTDM IP base address
+ *
+ * \return       None
+ */
+void Cy_AudioTDM_EnableClock(TDM_STRUCT_Type *base);
+
+/**
+ * Function Cy_AudioTDM_DisableClock
+ *
+ * Enable system clock for TDM IP. Required for register read/write access.
+ *
+ * \param[in]    base          : MXTDM IP base address
+ *
+ * \return       None
+ */
+void Cy_AudioTDM_DisableClock(TDM_STRUCT_Type *base);
 
 #if defined(__cplusplus)
     }

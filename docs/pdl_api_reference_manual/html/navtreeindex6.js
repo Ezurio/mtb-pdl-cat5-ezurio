@@ -1,5 +1,14 @@
 var NAVTREEINDEX6 =
 {
+"group__group__tdm__functions.html#ga8f2d5410c79247b147ab13dcce469359":[1,8,4,20],
+"group__group__tdm__functions.html#ga8facb87e8dcd4a87be8edd7cbe623ad9":[1,8,4,5],
+"group__group__tdm__functions.html#ga96f70d0e8eb752eebf31ce77d4ad2632":[1,8,4,0],
+"group__group__tdm__functions.html#ga9a7179ac79cf588bc83c50b493b2e4c3":[1,8,4,8],
+"group__group__tdm__functions.html#ga9ad9e21735e8db70bde439740e2e6adc":[1,8,4,19],
+"group__group__tdm__functions.html#ga9bc32759c43f82ed3f697ff7f81b52fe":[1,8,4,22],
+"group__group__tdm__functions.html#ga9e7cf53fc17a136532eded44e6804cb3":[1,8,4,39],
+"group__group__tdm__functions.html#gaa07d752316baa1b2965c3ef005efa41c":[1,8,4,21],
+"group__group__tdm__functions.html#gab1d04392a20db66777ea5f9f69675f4e":[1,8,4,10],
 "group__group__tdm__functions.html#gac00a26598b490ed753f7e16086bb69da":[1,8,4,7],
 "group__group__tdm__functions.html#gac26bb2b2557debd2c23156987813d7ec":[1,8,4,24],
 "group__group__tdm__functions.html#gac6ee55a09bdc7a02072dd038ebf2745d":[1,8,4,32],
@@ -240,14 +249,5 @@ var NAVTREEINDEX6 =
 "structcy__stc__smif__hybrid__region__info__t.html#a8091f46b31b31c38e46fa7eec1e35cff":[1,3,2,0,1,1],
 "structcy__stc__smif__hybrid__region__info__t.html#ab85285e79db802a1d10a3c057d5bbc68":[1,3,2,0,1,2],
 "structcy__stc__smif__hybrid__region__info__t.html#aced799769c060352abbbbff1603c00d5":[1,3,2,0,1,0],
-"structcy__stc__smif__hybrid__region__info__t.html#adfc0f4f12e086a45f53008ac2158c62a":[1,3,2,0,1,3],
-"structcy__stc__smif__mem__cmd__t.html":[1,3,2,0,0],
-"structcy__stc__smif__mem__cmd__t.html#a01766309d9ff04dd5555758776600be3":[1,3,2,0,0,4],
-"structcy__stc__smif__mem__cmd__t.html#a1933492ca1e86dd877868c9020af4412":[1,3,2,0,0,3],
-"structcy__stc__smif__mem__cmd__t.html#a23d95eaa05bd12e4cbb416e1f07af5d7":[1,3,2,0,0,2],
-"structcy__stc__smif__mem__cmd__t.html#a25cfb9111ccfd17478828ae6173ee8f5":[1,3,2,0,0,11],
-"structcy__stc__smif__mem__cmd__t.html#a35154a65f52742c8e937d6f24948f69d":[1,3,2,0,0,14],
-"structcy__stc__smif__mem__cmd__t.html#a354d50c480b6f4811a349c3a4221e2c7":[1,3,2,0,0,9],
-"structcy__stc__smif__mem__cmd__t.html#a5546688bed04b059f8ec1c80a7a5b28d":[1,3,2,0,0,15],
-"structcy__stc__smif__mem__cmd__t.html#a5a240edc3870586228a47dcc9cfca6ee":[1,3,2,0,0,6]
+"structcy__stc__smif__hybrid__region__info__t.html#adfc0f4f12e086a45f53008ac2158c62a":[1,3,2,0,1,3]
 };

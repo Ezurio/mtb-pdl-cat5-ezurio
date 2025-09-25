@@ -110,9 +110,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga28268b114d35484254e29696a165f72a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__l2cap__le__api__functions.html#ga28268b114d35484254e29696a165f72a">wiced_bt_l2cap_cancel_ble_connect_req</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> rem_bda)</td></tr>
 <tr class="memdesc:ga28268b114d35484254e29696a165f72a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a pending connection attempt to a LE device.  <a href="#ga28268b114d35484254e29696a165f72a">More...</a><br /></td></tr>
 <tr class="separator:ga28268b114d35484254e29696a165f72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacfa5536d207a4b9bb796e31ad37b09b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__l2cap__le__api__functions.html#gacfa5536d207a4b9bb796e31ad37b09b6">wiced_bt_l2cap_update_ble_conn_params</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> rem_bdRa, uint16_t min_int, uint16_t max_int, uint16_t latency, uint16_t timeout)</td></tr>
-<tr class="memdesc:gacfa5536d207a4b9bb796e31ad37b09b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update LE connection parameters.  <a href="#gacfa5536d207a4b9bb796e31ad37b09b6">More...</a><br /></td></tr>
-<tr class="separator:gacfa5536d207a4b9bb796e31ad37b09b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga649c28635db51a1a7fcc7a054e79b2d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__l2cap__le__api__functions.html#ga649c28635db51a1a7fcc7a054e79b2d3">wiced_bt_l2cap_update_ble_conn_params</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> rem_bdRa, <a class="el" href="structwiced__bt__ble__pref__conn__params__t.html">wiced_bt_ble_pref_conn_params_t</a> *p_conn_params)</td></tr>
+<tr class="memdesc:ga649c28635db51a1a7fcc7a054e79b2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update LE connection parameters.  <a href="#ga649c28635db51a1a7fcc7a054e79b2d3">More...</a><br /></td></tr>
+<tr class="separator:ga649c28635db51a1a7fcc7a054e79b2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga84c66f4df107063ddb0adc482b5491ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__l2cap__le__api__functions.html#ga84c66f4df107063ddb0adc482b5491ae">wiced_bt_l2cap_enable_update_ble_conn_params</a> (<a class="el" href="group__bt__types.html#gacf9a377aceca799be625c0dfe554902e">wiced_bt_device_address_t</a> rem_bda, <a class="el" href="group__gentypes.html#ga2bc92bd117cfd3f6ec4ae452e6ced064">wiced_bool_t</a> enable)</td></tr>
 <tr class="memdesc:ga84c66f4df107063ddb0adc482b5491ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application requests to disable or enable parameters update.  <a href="#ga84c66f4df107063ddb0adc482b5491ae">More...</a><br /></td></tr>
 <tr class="separator:ga84c66f4df107063ddb0adc482b5491ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +207,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rem_bda</td><td>Remote Bd Address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>TRUE to enable,FALSE to disable. If <code>enable</code> = FALSE, and if parameters are already updated, this API resets them to what was requested during connection establishement If <code>enable</code> = TRUE, then any pending request sent through <a class="el" href="group__l2cap__le__api__functions.html#gacfa5536d207a4b9bb796e31ad37b09b6">wiced_bt_l2cap_update_ble_conn_params</a> is processed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>TRUE to enable,FALSE to disable. If <code>enable</code> = FALSE, and if parameters are already updated, this API resets them to what was requested during connection establishement If <code>enable</code> = TRUE, then any pending request sent through <a class="el" href="group__l2cap__le__api__functions.html#ga649c28635db51a1a7fcc7a054e79b2d3">wiced_bt_l2cap_update_ble_conn_params</a> is processed</td></tr>
   </table>
   </dd>
 </dl>
@@ -651,7 +651,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gacfa5536d207a4b9bb796e31ad37b09b6"></a>
+<a class="anchor" id="ga649c28635db51a1a7fcc7a054e79b2d3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -664,26 +664,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>min_int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>max_int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>latency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>timeout</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structwiced__bt__ble__pref__conn__params__t.html">wiced_bt_ble_pref_conn_params_t</a> *&#160;</td>
+          <td class="paramname"><em>p_conn_params</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -697,10 +679,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rem_bdRa</td><td>: Remote BD Address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">min_int</td><td>: Min interval, measured in units of 1.25 ms </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">max_int</td><td>: Max interval, measured in units of 1.25 ms </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">latency</td><td>: Latency value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>: Timeout value, measured in units of 10 ms</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_conn_params</td><td>: Preferred connection parameters</td></tr>
   </table>
   </dd>
 </dl>
