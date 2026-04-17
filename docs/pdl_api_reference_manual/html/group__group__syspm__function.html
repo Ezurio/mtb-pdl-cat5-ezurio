@@ -177,6 +177,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ga19ece3bfefb4b9cb0875f530b56bbbb6"><td class="memItemLeft" align="right" valign="top">BOOL32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__function.html#ga19ece3bfefb4b9cb0875f530b56bbbb6">btss_smif_psram_exitLowPowerMode</a> (void)</td></tr>
 <tr class="memdesc:ga19ece3bfefb4b9cb0875f530b56bbbb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function btss_smif_psram_exitLowPowerMode.  <a href="#ga19ece3bfefb4b9cb0875f530b56bbbb6">More...</a><br /></td></tr>
 <tr class="separator:ga19ece3bfefb4b9cb0875f530b56bbbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c80b568555c7d321f224d22888b920f"><td class="memItemLeft" align="right" valign="top">BOOL32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__function.html#ga1c80b568555c7d321f224d22888b920f">btss_system_isLmTimerActive</a> (void)</td></tr>
+<tr class="memdesc:ga1c80b568555c7d321f224d22888b920f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function btss_system_isLmTimerActive.  <a href="#ga1c80b568555c7d321f224d22888b920f">More...</a><br /></td></tr>
+<tr class="separator:ga1c80b568555c7d321f224d22888b920f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9215483d208b87bdbd5a01bb64065421"><td class="memItemLeft" align="right" valign="top">BOOL32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__function.html#ga9215483d208b87bdbd5a01bb64065421">btss_system_isLmTimerControlEnabled</a> (void)</td></tr>
+<tr class="memdesc:ga9215483d208b87bdbd5a01bb64065421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function btss_system_isLmTimerControlEnabled.  <a href="#ga9215483d208b87bdbd5a01bb64065421">More...</a><br /></td></tr>
+<tr class="separator:ga9215483d208b87bdbd5a01bb64065421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaede42e4f0e0618bb60769211ad8b352d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__function.html#gaede42e4f0e0618bb60769211ad8b352d">btss_system_enableLmTimerControl</a> (BOOL32 enable)</td></tr>
+<tr class="memdesc:gaede42e4f0e0618bb60769211ad8b352d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function btss_system_enableLmTimerControl.  <a href="#gaede42e4f0e0618bb60769211ad8b352d">More...</a><br /></td></tr>
+<tr class="separator:gaede42e4f0e0618bb60769211ad8b352d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a3055995d12743c57e46fa9c72899f3"><td class="memItemLeft" align="right" valign="top">BOOL32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__function.html#ga5a3055995d12743c57e46fa9c72899f3">btss_system_activateLmTimer</a> (void)</td></tr>
+<tr class="memdesc:ga5a3055995d12743c57e46fa9c72899f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function btss_system_activateLmTimer.  <a href="#ga5a3055995d12743c57e46fa9c72899f3">More...</a><br /></td></tr>
+<tr class="separator:ga5a3055995d12743c57e46fa9c72899f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadff1239521ccfd0daee93374401e6798"><td class="memItemLeft" align="right" valign="top">BOOL32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__syspm__function.html#gadff1239521ccfd0daee93374401e6798">btss_system_deactivateLmTimer</a> (void)</td></tr>
+<tr class="memdesc:gadff1239521ccfd0daee93374401e6798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function btss_system_deactivateLmTimer.  <a href="#gadff1239521ccfd0daee93374401e6798">More...</a><br /></td></tr>
+<tr class="separator:gadff1239521ccfd0daee93374401e6798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga5f1be52950f76d639e0d6d797e9c4112"></a>
@@ -783,6 +798,136 @@ Functions</h2></td></tr>
 
 <p>Function btss_smif_psram_exitLowPowerMode. </p>
 <p>Returns TRUE if the operation of exiting Low Power mode to PSRAM is acknowledged.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE/FALSE : BOOL32 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1c80b568555c7d321f224d22888b920f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL32 btss_system_isLmTimerActive </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function btss_system_isLmTimerActive. </p>
+<p>Get if the lm timer is active</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE/FALSE : BOOL32 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9215483d208b87bdbd5a01bb64065421"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL32 btss_system_isLmTimerControlEnabled </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function btss_system_isLmTimerControlEnabled. </p>
+<p>Get if the user control for activation/deactivation of lm timer is enabled</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE/FALSE : BOOL32 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaede42e4f0e0618bb60769211ad8b352d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void btss_system_enableLmTimerControl </td>
+          <td>(</td>
+          <td class="paramtype">BOOL32&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function btss_system_enableLmTimerControl. </p>
+<p>Enable/Disable user control for activation/deactivation of lm timer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>: TRUE/FALSE : BOOL32</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5a3055995d12743c57e46fa9c72899f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL32 btss_system_activateLmTimer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function btss_system_activateLmTimer. </p>
+<p>Activate the lm timer - request will be accepted if user control is enabled and timer is not already active</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE/FALSE : BOOL32 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadff1239521ccfd0daee93374401e6798"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL32 btss_system_deactivateLmTimer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function btss_system_deactivateLmTimer. </p>
+<p>Deactivate the lm timer - request will be accepted if user control is enabled and timer is currently active</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">none</td><td></td></tr>

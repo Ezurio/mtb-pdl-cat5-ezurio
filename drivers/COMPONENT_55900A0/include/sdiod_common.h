@@ -35,6 +35,7 @@ typedef enum
     SDIOD_STATUS_ERR_BUSY,           /* Driver is busy */
     SDIOD_STATUS_ERR_TRANSPORT,      /* Hardware Bus error */
     SDIOD_STATUS_ERR_UNKNOWN,
+    SDIOD_STATUS_ERR_HW_INIT_FAILED, /* SDIOD Hardware Init Failed */
 } sdiod_status_t;
 
 //! SDIOD event code

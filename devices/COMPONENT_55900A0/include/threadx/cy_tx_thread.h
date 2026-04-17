@@ -127,7 +127,7 @@ BTSS_SYSTEM_NVRAM_OTA_ERR_t thread_ap_OTA_Deinitialize(void);
 BOOL8 thread_ap_smif_psram_Init(cy_smif_psram_device_cfg_t * cfg);
 
 //! This API disables the Serial Memory Interface (SMIF) to the PSRAM device.
-BOOL8 thread_ap_smif_psram_DeInit();
+cy_smif_psram_deinit_result_t thread_ap_smif_psram_DeInit(BOOL8 deInitPads);
 
 //! This function is used to setup the code and data regions in a PSRAM.
 //! Execution from CODE area is allowed, while prevented from DATA area.
