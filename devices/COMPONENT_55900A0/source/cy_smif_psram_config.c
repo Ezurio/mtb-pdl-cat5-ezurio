@@ -52,6 +52,7 @@ cy_smif_psram_device_cfg_t smifPsramConfig =
 	.smifParams.subPageNr = PSRAM_PARAM_SUBPAGE_NR,
 	.smifParams.subSeqBoundEn = PSRAM_PARAM_SUBSEQ_BOUND_ENABLE,
 	.smifParams.presentFirst = PSRAM_PARAM_PRESENT_FIRST,
+	.smifParams.halfSleepExitSetupTime = PSRAM_PARAM_HALFSLEEP_EXIT_SETUPTIME_150US,
 };
 
 

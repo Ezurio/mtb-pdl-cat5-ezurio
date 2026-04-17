@@ -690,6 +690,62 @@ BOOL32 btss_smif_psram_enterLowPowerMode(void);
  * \return       TRUE/FALSE  : BOOL32
  */
 BOOL32 btss_smif_psram_exitLowPowerMode(void);
+
+/**
+ * Function btss_system_isLmTimerActive
+ *
+ * Get if the lm timer is active
+ *
+ * \param[in]    none
+ *
+ * \return       TRUE/FALSE  : BOOL32
+ */
+BOOL32 btss_system_isLmTimerActive(void);
+
+/**
+ * Function btss_system_isLmTimerControlEnabled
+ *
+ * Get if the user control for activation/deactivation of lm timer is enabled
+ *
+ * \param[in]    none
+ *
+ * \return       TRUE/FALSE  : BOOL32
+ */
+BOOL32 btss_system_isLmTimerControlEnabled(void);
+
+/**
+ * Function btss_system_enableLmTimerControl
+ *
+ * Enable/Disable user control for activation/deactivation of lm timer
+ *
+ * \param[in]    enable  : TRUE/FALSE  : BOOL32
+ *
+ * \return       none
+ */
+void btss_system_enableLmTimerControl(BOOL32 enable);
+
+/**
+ * Function btss_system_activateLmTimer
+ *
+ * Activate the lm timer - request will be accepted if user control is enabled and timer is not already active
+ *
+ * \param[in]    none
+ *
+ * \return       TRUE/FALSE  : BOOL32
+ */
+BOOL32 btss_system_activateLmTimer(void);
+
+/**
+ * Function btss_system_deactivateLmTimer
+ *
+ * Deactivate the lm timer - request will be accepted if user control is enabled and timer is currently active
+ *
+ * \param[in]    none
+ *
+ * \return       TRUE/FALSE  : BOOL32
+ */
+BOOL32 btss_system_deactivateLmTimer(void);
+
 /** \} group_syspm_function */
 
 #include "bt_types.h"

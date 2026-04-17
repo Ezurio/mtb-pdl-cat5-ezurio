@@ -155,7 +155,7 @@ uint32_t matterkey_cryptoservice_delete_key( E_MATTERKEY_KEY_ID id_key );
  * \param[in]    id_key            : Key id to be stored (mapped to <E_MATTERKEY_KEY_ID>).
  * \param[out]   ptr_out_buffer    : Pointer to the  buffer to hold public-key.
  * \param[in]    len_out_buffer    : Buffer length to hold public-key.
- * \param[out]   ptr_len_act_key   : Holds actual private-key length
+ * \param[out]   ptr_len_act_key   : Holds actual public-key length
  *
  * \return       Result - Pass -> STATUS_MATTERKEY_SUCCESS
  */

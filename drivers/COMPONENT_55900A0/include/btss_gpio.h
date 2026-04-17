@@ -106,13 +106,13 @@ typedef void CTSS_LHL_IO_ISR_CALLBACK_t (UINT8 ioPort);
 /** \brief List of WLSS IOs */
 typedef enum
 {
-    WLSS_IO_GPIO_0 = 11, //Wake capable
-    WLSS_IO_GPIO_2 = 13, //Wake capable
-    WLSS_IO_GPIO_3 = 14, //Wake capable
-    WLSS_IO_GPIO_4 = 15, //Wake capable
-    WLSS_IO_GPIO_5 = 5,  //Wake capable
-    WLSS_IO_GPIO_6 = 6,  //Wake capable
-    WLSS_IO_SDIO_CMD = 0,//Wake capable
+    WLSS_IO_GPIO_0 = 11, //Interrupt and Wake capable
+    WLSS_IO_GPIO_2 = 13, //Interrupt and Wake capable
+    WLSS_IO_GPIO_3 = 14, //Interrupt and Wake capable
+    WLSS_IO_GPIO_4 = 15, //Interrupt and Wake capable
+    WLSS_IO_GPIO_5 = 5,  //Interrupt and Wake capable
+    WLSS_IO_GPIO_6 = 6,  //Interrupt and Wake capable
+    WLSS_IO_SDIO_CMD = 0,//Interrupt and Wake capable
     WLSS_IO_SDIO_DATA_0 = 1,
     WLSS_IO_SDIO_DATA_1 = 2,
     WLSS_IO_SDIO_DATA_2 = 3,
@@ -124,21 +124,22 @@ typedef enum
 /** \brief WLSS IO interrupt trigger */
 typedef enum
 {
-    WLSS_IO_INT_TRIGGER_EDGE_RISING = 0x2,
-    WLSS_IO_INT_TRIGGER_EDGE_FALLING = 0x4,
-    WLSS_IO_INT_TRIGGER_EDGE_BOTH = 0x6,
-    WLSS_IO_INT_TRIGGER_EDGE_NONE = 0x0,
+    WLSS_IO_INT_TRIGGER_LEVEL_HIGH = 0x000,
+    WLSS_IO_INT_TRIGGER_EDGE_RISING = 0x001,
+    WLSS_IO_INT_TRIGGER_LEVEL_LOW = 0x002,
+    WLSS_IO_INT_TRIGGER_EDGE_FALLING = 0x003,
+    WLSS_IO_INT_TRIGGER_EDGE_BOTH = 0x005,
 } WLSS_IO_INT_TRIGGER_TYPE_t;
 
 
-/** \brief WLSS IO wake trigger */
+/** \brief WLSS IO wake trigger DEPRECATED*/
 typedef enum
 {
-    WLSS_IO_WAKE_TRIGGER_LEVEL_HIGH = 0x100,
-    WLSS_IO_WAKE_TRIGGER_EDGE_RISING = 0x101,
-    WLSS_IO_WAKE_TRIGGER_LEVEL_LOW = 0x102,
-    WLSS_IO_WAKE_TRIGGER_EDGE_FALLING = 0x103,
-    WLSS_IO_WAKE_TRIGGER_EDGE_BOTH = 0x105,
+    WLSS_IO_WAKE_TRIGGER_LEVEL_HIGH = 0x000,
+    WLSS_IO_WAKE_TRIGGER_EDGE_RISING = 0x001,
+    WLSS_IO_WAKE_TRIGGER_LEVEL_LOW = 0x002,
+    WLSS_IO_WAKE_TRIGGER_EDGE_FALLING = 0x003,
+    WLSS_IO_WAKE_TRIGGER_EDGE_BOTH = 0x005,
 } WLSS_IO_WAKE_TRIGGER_TYPE_t;
 
 /** \brief WLSS IO interrupt callback */
@@ -471,7 +472,7 @@ void wlss_io_enableInterrupt(WLSS_IO_t io, BOOL32 enable);
 void wlss_io_enableGCIInterrupt(BOOL32 enable);
 
 /**
- * Function wlss_io_configWake
+ * Function wlss_io_configWake DEPRECATED
  *
  * Configure wake trigger for an io (WLSS_IO_GPIO_0 .. 6 and WLSS_IO_SDIO_CMD)
  *

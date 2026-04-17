@@ -1,15 +1,25 @@
-/*
- * Cypress Semiconductor Proprietary and Confidential. © 2016 Cypress Semiconductor.
- * All Rights Reserved.
- *
- * This is UNPUBLISHED PROPRIETARY SOURCE CODE of Cypress Semiconductor Corporation;
- * the contents of this file may not be disclosed to third parties, copied
- * or duplicated in any form, in whole or in part, without the prior
- * written permission of Cypress Semiconductor Corporation.
- */
+/*******************************************************************************
+* THIS INFORMATION IS PROPRIETARY TO INFINEON TECHNOLOGIES
+*
+* ------------------------------------------------------------------------------
+*
+* Copyright (c) 2018 Infineon Technologies.
+*
+*          ALL RIGHTS RESERVED
+*
+********************************************************************************
+*
+********************************************************************************
+*
+* File Name:wiced_transport_spi.h
+*
+*
+*******************************************************************************/
+
 /** @file
 *
 */
+
 #ifndef _WICED_TRANSPORT_SPI_H_
 #define _WICED_TRANSPORT_SPI_H_
 

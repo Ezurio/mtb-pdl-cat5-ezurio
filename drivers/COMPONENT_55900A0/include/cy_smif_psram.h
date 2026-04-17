@@ -35,6 +35,7 @@ typedef struct
     UINT8 subPageNr;              /* SMIF SUB_PAGE_NR (0 to 4)(default:1): corresponds to (1x to 8x  SUB_PAGE_SIZE): Specifies the number of sub pages per page. */
     UINT8 subSeqBoundEn;          /* SMIF SUBSEQ_BOUND_EN: Enable subsequent page boundary latency cycles. 0 to disable, 1 to enable */
     UINT8 presentFirst;           /* SMIF PRESENT: Presence of first page boundary latency cycles. 0- not present, 1- present */
+    UINT16 halfSleepExitSetupTime;/* SMIF HALFSLEEP_EXIT_SETUP_TIME: Half Sleep Exit CE# low to CLK setup time */
 } cy_smif_psram_cfg_params_t;
 
 /**
@@ -68,5 +69,15 @@ typedef struct
     UINT32 startData;           /* Start of data section */
     UINT32 lenData;             /* Length of data section */
 } cy_smif_psram_mem_params_t;
+
+/**
+* Result codes for PSRAM deinitialization operation.
+*/
+typedef enum
+{
+    CY_SMIF_PSRAM_DEINIT_SUCCESS = 0,         /* PSRAM deinitialization completed successfully */
+    CY_SMIF_PSRAM_DEINIT_ERR_FLASH_DETECTED,  /* Deinitialization failed: FLASH device detected on pads */
+    CY_SMIF_PSRAM_DEINIT_ERR_DEINIT_DEVICE,   /* Deinitialization failed: Error during PSRAM device deinitialization */
+} cy_smif_psram_deinit_result_t;
 
 #endif //_CY_SMIF_PSRAM_H_

@@ -1,5 +1,10 @@
 var NAVTREEINDEX7 =
 {
+"structcy__stc__smif__hybrid__region__info__t.html#a09282d5a0e7c8b9e1614b9a8cc547a37":[1,3,2,0,1,4],
+"structcy__stc__smif__hybrid__region__info__t.html#a8091f46b31b31c38e46fa7eec1e35cff":[1,3,2,0,1,1],
+"structcy__stc__smif__hybrid__region__info__t.html#ab85285e79db802a1d10a3c057d5bbc68":[1,3,2,0,1,2],
+"structcy__stc__smif__hybrid__region__info__t.html#aced799769c060352abbbbff1603c00d5":[1,3,2,0,1,0],
+"structcy__stc__smif__hybrid__region__info__t.html#adfc0f4f12e086a45f53008ac2158c62a":[1,3,2,0,1,3],
 "structcy__stc__smif__mem__cmd__t.html":[1,3,2,0,0],
 "structcy__stc__smif__mem__cmd__t.html#a01766309d9ff04dd5555758776600be3":[1,3,2,0,0,4],
 "structcy__stc__smif__mem__cmd__t.html#a1933492ca1e86dd877868c9020af4412":[1,3,2,0,0,3],

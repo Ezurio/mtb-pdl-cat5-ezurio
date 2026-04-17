@@ -22,5 +22,10 @@ var group__group__syspm__function =
     [ "btss_smif_psram_isLowPowerAllowed", "group__group__syspm__function.html#ga0d76b1a00452a5266afbc9b611ad70d0", null ],
     [ "btss_smif_psram_allowLowPowerMode", "group__group__syspm__function.html#ga18710857f9470f2b8f212a35c0fc49c9", null ],
     [ "btss_smif_psram_enterLowPowerMode", "group__group__syspm__function.html#ga9fcf283337ed23216131162b85ddf9ae", null ],
-    [ "btss_smif_psram_exitLowPowerMode", "group__group__syspm__function.html#ga19ece3bfefb4b9cb0875f530b56bbbb6", null ]
+    [ "btss_smif_psram_exitLowPowerMode", "group__group__syspm__function.html#ga19ece3bfefb4b9cb0875f530b56bbbb6", null ],
+    [ "btss_system_isLmTimerActive", "group__group__syspm__function.html#ga1c80b568555c7d321f224d22888b920f", null ],
+    [ "btss_system_isLmTimerControlEnabled", "group__group__syspm__function.html#ga9215483d208b87bdbd5a01bb64065421", null ],
+    [ "btss_system_enableLmTimerControl", "group__group__syspm__function.html#gaede42e4f0e0618bb60769211ad8b352d", null ],
+    [ "btss_system_activateLmTimer", "group__group__syspm__function.html#ga5a3055995d12743c57e46fa9c72899f3", null ],
+    [ "btss_system_deactivateLmTimer", "group__group__syspm__function.html#gadff1239521ccfd0daee93374401e6798", null ]
 ];
